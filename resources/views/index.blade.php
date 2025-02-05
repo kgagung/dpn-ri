@@ -132,15 +132,59 @@ License: For each use you must have a valid license purchased only from above li
 									<!--begin::Row-->
 									<div class="row g-10 mb-10">
 										<!--begin::Col-->
-										<div class="col-md-6">
+										<div class="col-lg-6">
+											<!--begin::Row-->
+											<div class="row g-10 mb-10">
+												<!--begin::Item-->
+												<a class="d-block card-rounded overlay" data-fslightbox="lightbox-projects" href="{{ asset('media/dpn-berita/img-1905.png') }}">
+													<!--begin::Image-->
+													<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px" style="background-image:url('media/dpn-berita/img-1905.png')">
+														<div class="bgi-no-repeat bgi-position-center bgi-size-cover card-rounded" style="background-color: #292D31; opacity: 90%; position:absolute; background-size: cover; width:93.5%; height:100%;"></div>
+														<h1 style="position: absolute; padding:10%; color: white; font-size: 20px; font-weight: bold; text-align: left; z-index: 2;">Pengalihan Status Kepegawaian CPNS Hasil Pengadaan CPNS Setjen Wantannas RI T.A. 2024</h1>
+														<div class="position-absolute top-75 start-25 translate-middle">
+															<p style="color: white;">JAN 24, 2025</p>
+														</div>
+														<div class="position-absolute top-75 start-50 translate-middle">
+															<p style="color: white;">2 MINS READ</p>
+														</div>
+														<div class="position-absolute top-75 start-75 translate-middle">
+															<p style="color: white;">275 VIEWS</p>
+														</div>
+													</div>
+													<!--end::Image-->
+													<!--begin::Action-->
+													<div class="overlay-layer card-rounded bg-dark bg-opacity-75" style="background-image:url('media/dpn-berita/img-1905.png'); position: absolute; z-index: 10; background-size: cover;">
+														<i class="ki-duotone ki-eye fs-5x text-black">
+															<span class="path1"></span>
+															<span class="path2"></span>
+															<span class="path3"></span>
+														</i>
+													</div>
+													<!--end::Action-->
+												</a>
+												<!--end::Item-->
+											</div>
+											<!--end::Row-->
 											<!--begin::Item-->
-											<a class="d-block card-rounded overlay h-lg-50" data-fslightbox="lightbox-projects" href="{{ asset('media/stock/600x600/img-23.jpg') }}">
+											<a class="d-block card-rounded overlay" data-fslightbox="lightbox-projects" href="{{ asset('media/dpn-berita/301224.jpeg') }}">
 												<!--begin::Image-->
-												<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-lg-100 min-h-250px" style="background-image:url('media/stock/600x600/img-23.jpg')"></div>
+												<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px" style="background-image:url('media/dpn-berita/301224.jpeg')">
+													<div class="bgi-no-repeat bgi-position-center bgi-size-cover card-rounded" style="background-color: #292D31; opacity: 90%; position:absolute; background-size: cover; width:100%; height:100%;"></div>
+													<h1 style="position: absolute; padding:10%; color: white; font-size: 20px; font-weight: bold; text-align: left; z-index: 2;">Presiden Prabowo Tekankan Pentingnya Perencanaan dalam Pembangunan Nasional Berbasis Ekonomi Pancasila</h1>
+													<div class="position-absolute top-75 start-25 translate-middle">
+														<p style="color: white;">DES 30, 2024</p>
+													</div>
+													<div class="position-absolute top-75 start-50 translate-middle">
+														<p style="color: white;">15 MINS READ</p>
+													</div>
+													<div class="position-absolute top-75 start-75 translate-middle">
+														<p style="color: white;">228 VIEWS</p>
+													</div>
+												</div>
 												<!--end::Image-->
 												<!--begin::Action-->
-												<div class="overlay-layer card-rounded bg-dark bg-opacity-25">
-													<i class="ki-duotone ki-eye fs-3x text-white">
+												<div class="overlay-layer card-rounded bg-dark bg-opacity-75" style="background-image:url('media/dpn-berita/301224.jpeg'); position: absolute; z-index: 10; background-size: cover;">
+													<i class="ki-duotone ki-eye fs-5x text-black">
 														<span class="path1"></span>
 														<span class="path2"></span>
 														<span class="path3"></span>
@@ -155,56 +199,56 @@ License: For each use you must have a valid license purchased only from above li
 										<div class="col-lg-6">
 											<!--begin::Row-->
 											<div class="row g-10 mb-10">
-												<!--begin::Col-->
-												<div class="col-lg-6">
-													<!--begin::Item-->
-													<a class="d-block card-rounded overlay" data-fslightbox="lightbox-projects" href="{{ asset('media/stock/600x600/img-22.jpg') }}">
-														<!--begin::Image-->
-														<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px" style="background-image:url('media/stock/600x600/img-22.jpg')"></div>
-														<!--end::Image-->
-														<!--begin::Action-->
-														<div class="overlay-layer card-rounded bg-dark bg-opacity-25">
-															<i class="ki-duotone ki-eye fs-3x text-white">
-																<span class="path1"></span>
-																<span class="path2"></span>
-																<span class="path3"></span>
-															</i>
+												<!--begin::Item-->
+												<a class="d-block card-rounded overlay" data-fslightbox="lightbox-projects" href="{{ asset('media/dpn-berita/301224-22.jpeg') }}">
+													<!--begin::Image-->
+													<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px" style="background-image:url('media/dpn-berita/301224-22.jpeg')">
+														<div class="bgi-no-repeat bgi-position-center bgi-size-cover card-rounded" style="background-color: #292D31; opacity: 90%; position:absolute; background-size: cover; width:93.5%; height:100%;"></div>
+														<h1 style="position: absolute; padding:10%; color: white; font-size: 20px; font-weight: bold; text-align: left; z-index: 2;">Presiden Prabowo Ambil Keputusan Bersejarah untuk Swasembada Pangan</h1>
+														<div class="position-absolute top-75 start-25 translate-middle">
+															<p style="color: white;">DES 30, 2024</p>
 														</div>
-														<!--end::Action-->
-													</a>
-													<!--end::Item-->
-												</div>
-												<!--end::Col-->
-												<!--begin::Col-->
-												<div class="col-lg-6">
-													<!--begin::Item-->
-													<a class="d-block card-rounded overlay" data-fslightbox="lightbox-projects" href="{{ asset('media/stock/600x600/img-21.jpg') }}">
-														<!--begin::Image-->
-														<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px" style="background-image:url('media/stock/600x600/img-21.jpg')"></div>
-														<!--end::Image-->
-														<!--begin::Action-->
-														<div class="overlay-layer card-rounded bg-dark bg-opacity-25">
-															<i class="ki-duotone ki-eye fs-3x text-white">
-																<span class="path1"></span>
-																<span class="path2"></span>
-																<span class="path3"></span>
-															</i>
+														<div class="position-absolute top-75 start-50 translate-middle">
+															<p style="color: white;">5 MINS READ</p>
 														</div>
-														<!--end::Action-->
-													</a>
-													<!--end::Item-->
-												</div>
-												<!--end::Col-->
+														<div class="position-absolute top-75 start-75 translate-middle">
+															<p style="color: white;">185 VIEWS</p>
+														</div>
+													</div>
+													<!--end::Image-->
+													<!--begin::Action-->
+													<div class="overlay-layer card-rounded bg-dark bg-opacity-75" style="background-image:url('media/dpn-berita/301224-22.jpeg'); position: absolute; z-index: 10; background-size: cover;">
+														<i class="ki-duotone ki-eye fs-5x text-black">
+															<span class="path1"></span>
+															<span class="path2"></span>
+															<span class="path3"></span>
+														</i>
+													</div>
+													<!--end::Action-->
+												</a>
+												<!--end::Item-->
 											</div>
 											<!--end::Row-->
 											<!--begin::Item-->
-											<a class="d-block card-rounded overlay" data-fslightbox="lightbox-projects" href="{{ asset('media/stock/600x400/img-20.jpg') }}">
+											<a class="d-block card-rounded overlay" data-fslightbox="lightbox-projects" href="{{ asset('media/dpn-berita/281224.jpeg') }}">
 												<!--begin::Image-->
-												<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px" style="background-image:url('media/stock/600x600/img-20.jpg')"></div>
+												<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px" style="background-image:url('media/dpn-berita/281224.jpeg')">
+													<div class="bgi-no-repeat bgi-position-center bgi-size-cover card-rounded" style="background-color: #292D31; opacity: 90%; position:absolute; background-size: cover; width:100%; height:100%;"></div>
+													<h1 style="position: absolute; padding:10%; color: white; font-size: 20px; font-weight: bold; text-align: left; z-index: 2;">Presiden Prabowo Hadiri Perayaan Natal Nasional Tahun 2024</h1>
+													<div class="position-absolute top-75 start-25 translate-middle">
+														<p style="color: white;">DES 30, 2024</p>
+													</div>
+													<div class="position-absolute top-75 start-50 translate-middle">
+														<p style="color: white;">5 MINS READ</p>
+													</div>
+													<div class="position-absolute top-75 start-75 translate-middle">
+														<p style="color: white;">185 VIEWS</p>
+													</div>
+												</div>
 												<!--end::Image-->
 												<!--begin::Action-->
-												<div class="overlay-layer card-rounded bg-dark bg-opacity-25">
-													<i class="ki-duotone ki-eye fs-3x text-white">
+												<div class="overlay-layer card-rounded bg-dark bg-opacity-75" style="background-image:url('media/dpn-berita/281224.jpeg'); position: absolute; z-index: 10; background-size: cover;">
+													<i class="ki-duotone ki-eye fs-5x text-black">
 														<span class="path1"></span>
 														<span class="path2"></span>
 														<span class="path3"></span>
