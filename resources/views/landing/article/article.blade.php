@@ -56,7 +56,7 @@
                 <div class="overlay mt-8">
                     <!--begin::Image-->
                     <div class="bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-350px"
-                        style="background-image:url('assets/media/stock/1600x800/img-1.jpg')">
+                        style="background-image:url('{{asset('media/stock/1600x800/img-1.jpg')}}')">
                     </div>
                     <!--end::Image-->
                 </div>
