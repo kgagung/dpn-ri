@@ -50,7 +50,7 @@ License: For each use you must have a valid license purchased only from above li
 							<nav class="d-flex align-items-center align-items-center position-relative" style="background: linear-gradient(to right, #F5E4CA 15%, #6E7049 50%, #292D31 85%); z-index: 50; height: 75px;">								
 								<div class="text-center">
 									<img src="{{ asset('media/dpn/Logo DPN-16.png') }}"
-										alt="Logo" class="me-20" style="max-height: 180px; padding-left: 10%">
+										alt="Logo" class="me-20" style="max-height: 62px; padding-left: 10%">
 								</div>
 
 								<div class="d-flex align-items-center">
@@ -106,8 +106,8 @@ License: For each use you must have a valid license purchased only from above li
 							</div>
 							<!--end::Heading-->
 							<!--begin::Tabs wrapper-->
-							<div class="d-flex flex-center mb-5 mb-lg-15">
-								<!--begin::Tabs-->
+							<!-- <div class="d-flex flex-center mb-5 mb-lg-15">
+								
 								<ul class="nav border-transparent flex-center fs-5 fw-bold">
 									<li class="nav-item">
 										<a class="nav-link text-gray-500 text-active-primary px-3 px-lg-6 active" href="#" data-bs-toggle="tab" data-bs-target="#kt_landing_projects_latest">Latest</a>
@@ -122,8 +122,8 @@ License: For each use you must have a valid license purchased only from above li
 										<a class="nav-link text-gray-500 text-active-primary px-3 px-lg-6" href="#" data-bs-toggle="tab" data-bs-target="#kt_landing_projects_development">Development</a>
 									</li>
 								</ul>
-								<!--end::Tabs-->
-							</div>
+								
+							</div> -->
 							<!--end::Tabs wrapper-->
 							<!--begin::Tabs content-->
 							<div class="tab-content">
@@ -263,282 +263,6 @@ License: For each use you must have a valid license purchased only from above li
 									<!--end::Row-->
 								</div>
 								<!--end::Tab pane-->
-								<!--begin::Tab pane-->
-								<div class="tab-pane fade" id="kt_landing_projects_web_design">
-									<!--begin::Row-->
-									<div class="row g-10">
-										<!--begin::Col-->
-										<div class="col-lg-6">
-											<!--begin::Item-->
-											<a class="d-block card-rounded overlay h-lg-100" data-fslightbox="lightbox-projects" href="{{ asset('media/stock/600x600/img-11.jpg') }}">
-												<!--begin::Image-->
-												<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-lg-100 min-h-250px" style="background-image:url('media/stock/600x600/img-11.jpg')"></div>
-												<!--end::Image-->
-												<!--begin::Action-->
-												<div class="overlay-layer card-rounded bg-dark bg-opacity-25">
-													<i class="ki-duotone ki-eye fs-3x text-white">
-														<span class="path1"></span>
-														<span class="path2"></span>
-														<span class="path3"></span>
-													</i>
-												</div>
-												<!--end::Action-->
-											</a>
-											<!--end::Item-->
-										</div>
-										<!--end::Col-->
-										<!--begin::Col-->
-										<div class="col-lg-6">
-											<!--begin::Row-->
-											<div class="row g-10 mb-10">
-												<!--begin::Col-->
-												<div class="col-lg-6">
-													<!--begin::Item-->
-													<a class="d-block card-rounded overlay" data-fslightbox="lightbox-projects" href="{{ asset('media/stock/600x600/img-12.jpg') }}">
-														<!--begin::Image-->
-														<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px" style="background-image:url('media/stock/600x600/img-12.jpg')"></div>
-														<!--end::Image-->
-														<!--begin::Action-->
-														<div class="overlay-layer card-rounded bg-dark bg-opacity-25">
-															<i class="ki-duotone ki-eye fs-3x text-white">
-																<span class="path1"></span>
-																<span class="path2"></span>
-																<span class="path3"></span>
-															</i>
-														</div>
-														<!--end::Action-->
-													</a>
-													<!--end::Item-->
-												</div>
-												<!--end::Col-->
-												<!--begin::Col-->
-												<div class="col-lg-6">
-													<!--begin::Item-->
-													<a class="d-block card-rounded overlay" data-fslightbox="lightbox-projects" href="{{ asset('media/stock/600x600/img-21.jpg') }}">
-														<!--begin::Image-->
-														<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px" style="background-image:url('media/stock/600x600/img-21.jpg')"></div>
-														<!--end::Image-->
-														<!--begin::Action-->
-														<div class="overlay-layer card-rounded bg-dark bg-opacity-25">
-															<i class="ki-duotone ki-eye fs-3x text-white">
-																<span class="path1"></span>
-																<span class="path2"></span>
-																<span class="path3"></span>
-															</i>
-														</div>
-														<!--end::Action-->
-													</a>
-													<!--end::Item-->
-												</div>
-												<!--end::Col-->
-											</div>
-											<!--end::Row-->
-											<!--begin::Item-->
-											<a class="d-block card-rounded overlay" data-fslightbox="lightbox-projects" href="{{ asset('media/stock/600x400/img-20.jpg') }}">
-												<!--begin::Image-->
-												<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px" style="background-image:url('media/stock/600x600/img-20.jpg')"></div>
-												<!--end::Image-->
-												<!--begin::Action-->
-												<div class="overlay-layer card-rounded bg-dark bg-opacity-25">
-													<i class="ki-duotone ki-eye fs-3x text-white">
-														<span class="path1"></span>
-														<span class="path2"></span>
-														<span class="path3"></span>
-													</i>
-												</div>
-												<!--end::Action-->
-											</a>
-											<!--end::Item-->
-										</div>
-										<!--end::Col-->
-									</div>
-									<!--end::Row-->
-								</div>
-								<!--end::Tab pane-->
-								<!--begin::Tab pane-->
-								<div class="tab-pane fade" id="kt_landing_projects_mobile_apps">
-									<!--begin::Row-->
-									<div class="row g-10">
-										<!--begin::Col-->
-										<div class="col-lg-6">
-											<!--begin::Row-->
-											<div class="row g-10 mb-10">
-												<!--begin::Col-->
-												<div class="col-lg-6">
-													<!--begin::Item-->
-													<a class="d-block card-rounded overlay" data-fslightbox="lightbox-projects" href="resources/media/stock/600x600/img-16.jpg">
-														<!--begin::Image-->
-														<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px" style="background-image:url('resources/media/stock/600x600/img-16.jpg')"></div>
-														<!--end::Image-->
-														<!--begin::Action-->
-														<div class="overlay-layer card-rounded bg-dark bg-opacity-25">
-															<i class="ki-duotone ki-eye fs-3x text-white">
-																<span class="path1"></span>
-																<span class="path2"></span>
-																<span class="path3"></span>
-															</i>
-														</div>
-														<!--end::Action-->
-													</a>
-													<!--end::Item-->
-												</div>
-												<!--end::Col-->
-												<!--begin::Col-->
-												<div class="col-lg-6">
-													<!--begin::Item-->
-													<a class="d-block card-rounded overlay" data-fslightbox="lightbox-projects" href="resources/media/stock/600x600/img-12.jpg">
-														<!--begin::Image-->
-														<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px" style="background-image:url('resources/media/stock/600x600/img-12.jpg')"></div>
-														<!--end::Image-->
-														<!--begin::Action-->
-														<div class="overlay-layer card-rounded bg-dark bg-opacity-25">
-															<i class="ki-duotone ki-eye fs-3x text-white">
-																<span class="path1"></span>
-																<span class="path2"></span>
-																<span class="path3"></span>
-															</i>
-														</div>
-														<!--end::Action-->
-													</a>
-													<!--end::Item-->
-												</div>
-												<!--end::Col-->
-											</div>
-											<!--end::Row-->
-											<!--begin::Item-->
-											<a class="d-block card-rounded overlay" data-fslightbox="lightbox-projects" href="resources/media/stock/600x400/img-15.jpg">
-												<!--begin::Image-->
-												<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px" style="background-image:url('resources/media/stock/600x600/img-15.jpg')"></div>
-												<!--end::Image-->
-												<!--begin::Action-->
-												<div class="overlay-layer card-rounded bg-dark bg-opacity-25">
-													<i class="ki-duotone ki-eye fs-3x text-white">
-														<span class="path1"></span>
-														<span class="path2"></span>
-														<span class="path3"></span>
-													</i>
-												</div>
-												<!--end::Action-->
-											</a>
-											<!--end::Item-->
-										</div>
-										<!--end::Col-->
-										<!--begin::Col-->
-										<div class="col-lg-6">
-											<!--begin::Item-->
-											<a class="d-block card-rounded overlay h-lg-100" data-fslightbox="lightbox-projects" href="resources/media/stock/600x600/img-23.jpg">
-												<!--begin::Image-->
-												<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-lg-100 min-h-250px" style="background-image:url('resources/media/stock/600x600/img-23.jpg')"></div>
-												<!--end::Image-->
-												<!--begin::Action-->
-												<div class="overlay-layer card-rounded bg-dark bg-opacity-25">
-													<i class="ki-duotone ki-eye fs-3x text-white">
-														<span class="path1"></span>
-														<span class="path2"></span>
-														<span class="path3"></span>
-													</i>
-												</div>
-												<!--end::Action-->
-											</a>
-											<!--end::Item-->
-										</div>
-										<!--end::Col-->
-									</div>
-									<!--end::Row-->
-								</div>
-								<!--end::Tab pane-->
-								<!--begin::Tab pane-->
-								<div class="tab-pane fade" id="kt_landing_projects_development">
-									<!--begin::Row-->
-									<div class="row g-10">
-										<!--begin::Col-->
-										<div class="col-lg-6">
-											<!--begin::Item-->
-											<a class="d-block card-rounded overlay h-lg-100" data-fslightbox="lightbox-projects" href="resources/media/stock/600x600/img-15.jpg">
-												<!--begin::Image-->
-												<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-lg-100 min-h-250px" style="background-image:url('resources/media/stock/600x600/img-15.jpg')"></div>
-												<!--end::Image-->
-												<!--begin::Action-->
-												<div class="overlay-layer card-rounded bg-dark bg-opacity-25">
-													<i class="ki-duotone ki-eye fs-3x text-white">
-														<span class="path1"></span>
-														<span class="path2"></span>
-														<span class="path3"></span>
-													</i>
-												</div>
-												<!--end::Action-->
-											</a>
-											<!--end::Item-->
-										</div>
-										<!--end::Col-->
-										<!--begin::Col-->
-										<div class="col-lg-6">
-											<!--begin::Row-->
-											<div class="row g-10 mb-10">
-												<!--begin::Col-->
-												<div class="col-lg-6">
-													<!--begin::Item-->
-													<a class="d-block card-rounded overlay" data-fslightbox="lightbox-projects" href="resources/media/stock/600x600/img-22.jpg">
-														<!--begin::Image-->
-														<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px" style="background-image:url('resources/media/stock/600x600/img-22.jpg')"></div>
-														<!--end::Image-->
-														<!--begin::Action-->
-														<div class="overlay-layer card-rounded bg-dark bg-opacity-25">
-															<i class="ki-duotone ki-eye fs-3x text-white">
-																<span class="path1"></span>
-																<span class="path2"></span>
-																<span class="path3"></span>
-															</i>
-														</div>
-														<!--end::Action-->
-													</a>
-													<!--end::Item-->
-												</div>
-												<!--end::Col-->
-												<!--begin::Col-->
-												<div class="col-lg-6">
-													<!--begin::Item-->
-													<a class="d-block card-rounded overlay" data-fslightbox="lightbox-projects" href="resources/media/stock/600x600/img-21.jpg">
-														<!--begin::Image-->
-														<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px" style="background-image:url('resources/media/stock/600x600/img-21.jpg')"></div>
-														<!--end::Image-->
-														<!--begin::Action-->
-														<div class="overlay-layer card-rounded bg-dark bg-opacity-25">
-															<i class="ki-duotone ki-eye fs-3x text-white">
-																<span class="path1"></span>
-																<span class="path2"></span>
-																<span class="path3"></span>
-															</i>
-														</div>
-														<!--end::Action-->
-													</a>
-													<!--end::Item-->
-												</div>
-												<!--end::Col-->
-											</div>
-											<!--end::Row-->
-											<!--begin::Item-->
-											<a class="d-block card-rounded overlay" data-fslightbox="lightbox-projects" href="resources/media/stock/600x400/img-14.jpg">
-												<!--begin::Image-->
-												<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px" style="background-image:url('resources/media/stock/600x600/img-14.jpg')"></div>
-												<!--end::Image-->
-												<!--begin::Action-->
-												<div class="overlay-layer card-rounded bg-dark bg-opacity-25">
-													<i class="ki-duotone ki-eye fs-3x text-white">
-														<span class="path1"></span>
-														<span class="path2"></span>
-														<span class="path3"></span>
-													</i>
-												</div>
-												<!--end::Action-->
-											</a>
-											<!--end::Item-->
-										</div>
-										<!--end::Col-->
-									</div>
-									<!--end::Row-->
-								</div>
-								<!--end::Tab pane-->
 							</div>
 							<!--end::Tabs content-->
 						</div>
@@ -552,20 +276,20 @@ License: For each use you must have a valid license purchased only from above li
 			<!--begin::Statistics Section-->
 			<div class="mt-sm-n10">
 				<!--begin::Curve top-->
-				<div class="landing-curve landing-dark-color">
+				<div class="landing-curve" style="color: #F5E4CA;">
 					<svg viewBox="15 -1 1470 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M1 48C4.93573 47.6644 8.85984 47.3311 12.7725 47H1489.16C1493.1 47.3311 1497.04 47.6644 1501 48V47H1489.16C914.668 -1.34764 587.282 -1.61174 12.7725 47H1V48Z" fill="currentColor"></path>
 					</svg>
 				</div>
 				<!--end::Curve top-->
 				<!--begin::Wrapper-->
-				<div class="pb-15 pt-18 landing-dark-bg">
+				<div class="pb-15 pt-18">
 					<!--begin::Container-->
 					<div class="container">
 						<!--begin::Heading-->
 						<div class="text-center mt-15 mb-18" id="achievements" data-kt-scroll-offset="{default: 100, lg: 150}">
 							<!--begin::Title-->
-							<h3 class="fs-2hx text-white fw-bold mb-5">We Make Things Better</h3>
+							<h3 class="fs-2hx text-black fw-bold mb-5">Persebaran Batalyon</h3>
 							<!--end::Title-->
 							<!--begin::Description-->
 							<div class="fs-5 text-gray-700 fw-bold">Save thousands to millions of bucks by using single tool
@@ -1300,141 +1024,24 @@ License: For each use you must have a valid license purchased only from above li
 						<!--end::Col-->
 					</div>
 					<!--end::Row-->
-					<!--begin::Highlight-->
-					<div class="d-flex flex-stack flex-wrap flex-md-nowrap card-rounded shadow p-8 p-lg-12 mb-n5 mb-lg-n13" style="background: linear-gradient(90deg, #20AA3E 0%, #03A588 100%);">
-						<!--begin::Content-->
-						<div class="my-2 me-5">
-							<!--begin::Title-->
-							<div class="fs-1 fs-lg-2qx fw-bold text-white mb-2">Start With Metronic Today,
-							<span class="fw-normal">Speed Up Development!</span></div>
-							<!--end::Title-->
-							<!--begin::Description-->
-							<div class="fs-6 fs-lg-5 text-white fw-semibold opacity-75">Join over 100,000 Professionals Community to Stay Ahead</div>
-							<!--end::Description-->
-						</div>
-						<!--end::Content-->
-						<!--begin::Link-->
-						<a href="https://1.envato.market/EA4JP" class="btn btn-lg btn-outline border-2 btn-outline-white flex-shrink-0 my-2">Purchase on Themeforest</a>
-						<!--end::Link-->
-					</div>
-					<!--end::Highlight-->
 				</div>
 				<!--end::Container-->
 			</div>
 			<!--end::Testimonials Section-->
 			<!--begin::Footer Section-->
-			<div class="mb-0">
-				<!--begin::Curve top-->
-				<div class="landing-curve landing-dark-color">
-					<svg viewBox="15 -1 1470 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M1 48C4.93573 47.6644 8.85984 47.3311 12.7725 47H1489.16C1493.1 47.3311 1497.04 47.6644 1501 48V47H1489.16C914.668 -1.34764 587.282 -1.61174 12.7725 47H1V48Z" fill="currentColor"></path>
-					</svg>
-				</div>
-				<!--end::Curve top-->
+			<div class="mb-0" style="padding-top: 5%;">
 				<!--begin::Wrapper-->
-				<div class="landing-dark-bg pt-20">
+				<div class="pt-20" style="background: linear-gradient(to top, #6E7049 25%, #87908F 75%);">
 					<!--begin::Container-->
 					<div class="container">
-						<!--begin::Row-->
-						<div class="row py-10 py-lg-20">
-							<!--begin::Col-->
-							<div class="col-lg-6 pe-lg-16 mb-10 mb-lg-0">
-								<!--begin::Block-->
-								<div class="rounded landing-dark-border p-9 mb-10">
-									<!--begin::Title-->
-									<h2 class="text-white">Would you need a Custom License?</h2>
-									<!--end::Title-->
-									<!--begin::Text-->
-									<span class="fw-normal fs-4 text-gray-700">Email us to
-									<a href="https://keenthemes.com/support" class="text-white opacity-50 text-hover-primary">support@keenthemes.com</a></span>
-									<!--end::Text-->
-								</div>
-								<!--end::Block-->
-								<!--begin::Block-->
-								<div class="rounded landing-dark-border p-9">
-									<!--begin::Title-->
-									<h2 class="text-white">How About a Custom Project?</h2>
-									<!--end::Title-->
-									<!--begin::Text-->
-									<span class="fw-normal fs-4 text-gray-700">Use Our Custom Development Service.
-									<a href="../../demo2/dist/pages/user-profile/overview.html" class="text-white opacity-50 text-hover-primary">Click to Get a Quote</a></span>
-									<!--end::Text-->
-								</div>
-								<!--end::Block-->
-							</div>
-							<!--end::Col-->
-							<!--begin::Col-->
-							<div class="col-lg-6 ps-lg-16">
-								<!--begin::Navs-->
-								<div class="d-flex justify-content-center">
-									<!--begin::Links-->
-									<div class="d-flex fw-semibold flex-column me-20">
-										<!--begin::Subtitle-->
-										<h4 class="fw-bold text-gray-400 mb-6">More for Metronic</h4>
-										<!--end::Subtitle-->
-										<!--begin::Link-->
-										<a href="https://keenthemes.com/faqs" class="text-white opacity-50 text-hover-primary fs-5 mb-6">FAQ</a>
-										<!--end::Link-->
-										<!--begin::Link-->
-										<a href="https://preview.keenthemes.com/html/metronic/docs" class="text-white opacity-50 text-hover-primary fs-5 mb-6">Documentaions</a>
-										<!--end::Link-->
-										<!--begin::Link-->
-										<a href="https://www.youtube.com/c/KeenThemesTuts/videos" class="text-white opacity-50 text-hover-primary fs-5 mb-6">Video Tuts</a>
-										<!--end::Link-->
-										<!--begin::Link-->
-										<a href="https://preview.keenthemes.com/html/metronic/docs/getting-started/changelog" class="text-white opacity-50 text-hover-primary fs-5 mb-6">Changelog</a>
-										<!--end::Link-->
-										<!--begin::Link-->
-										<a href="https://devs.keenthemes.com/" class="text-white opacity-50 text-hover-primary fs-5 mb-6">Support Forum</a>
-										<!--end::Link-->
-										<!--begin::Link-->
-										<a href="https://keenthemes.com/blog" class="text-white opacity-50 text-hover-primary fs-5">Blog</a>
-										<!--end::Link-->
-									</div>
-									<!--end::Links-->
-									<!--begin::Links-->
-									<div class="d-flex fw-semibold flex-column ms-lg-20">
-										<!--begin::Subtitle-->
-										<h4 class="fw-bold text-gray-400 mb-6">Stay Connected</h4>
-										<!--end::Subtitle-->
-										<!--begin::Link-->
-										<a href="https://www.facebook.com/keenthemes" class="mb-6">
-											<img src="resources/media/svg/brand-logos/facebook-4.svg" class="h-20px me-2" alt="" />
-											<span class="text-white opacity-50 text-hover-primary fs-5 mb-6">Facebook</span>
-										</a>
-										<!--end::Link-->
-										<!--begin::Link-->
-										<a href="https://github.com/KeenthemesHub" class="mb-6">
-											<img src="resources/media/svg/brand-logos/github.svg" class="h-20px me-2" alt="" />
-											<span class="text-white opacity-50 text-hover-primary fs-5 mb-6">Github</span>
-										</a>
-										<!--end::Link-->
-										<!--begin::Link-->
-										<a href="https://twitter.com/keenthemes" class="mb-6">
-											<img src="resources/media/svg/brand-logos/twitter.svg" class="h-20px me-2" alt="" />
-											<span class="text-white opacity-50 text-hover-primary fs-5 mb-6">Twitter</span>
-										</a>
-										<!--end::Link-->
-										<!--begin::Link-->
-										<a href="https://dribbble.com/keenthemes" class="mb-6">
-											<img src="resources/media/svg/brand-logos/dribbble-icon-1.svg" class="h-20px me-2" alt="" />
-											<span class="text-white opacity-50 text-hover-primary fs-5 mb-6">Dribbble</span>
-										</a>
-										<!--end::Link-->
-										<!--begin::Link-->
-										<a href="https://www.instagram.com/keenthemes" class="mb-6">
-											<img src="resources/media/svg/brand-logos/instagram-2-1.svg" class="h-20px me-2" alt="" />
-											<span class="text-white opacity-50 text-hover-primary fs-5 mb-6">Instagram</span>
-										</a>
-										<!--end::Link-->
-									</div>
-									<!--end::Links-->
-								</div>
-								<!--end::Navs-->
-							</div>
-							<!--end::Col-->
+						<div class="text-center mb-17">
+							<!--begin::Title-->
+							<h3 class="fs-2hx text-white mb-5" id="clients" data-kt-scroll-offset="{default: 125, lg: 150}">About Us</h3>
+							<!--end::Title-->
+							<!--begin::Description-->
+							<div class="fs-5 text-white fw-bold" style="text-align: justify; padding-left: 10%; padding-right: 10%">Lorem ipsum odor amet, consectetuer adipiscing elit. Egestas fermentum leo hendrerit diam aptent luctus gravida. Porttitor elit nunc natoque finibus sociosqu. Pretium tellus purus praesent magna tortor mauris conubia ultricies varius. Nibh faucibus consequat laoreet felis tortor suscipit lacinia. Sollicitudin tincidunt sed velit; magna condimentum ultrices vestibulum. Elementum ligula tempor purus duis natoque ad nulla quisque.</div>
+							<!--end::Description-->
 						</div>
-						<!--end::Row-->
 					</div>
 					<!--end::Container-->
 					<!--begin::Separator-->
@@ -1448,24 +1055,36 @@ License: For each use you must have a valid license purchased only from above li
 							<div class="d-flex align-items-center order-2 order-md-1">
 								<!--begin::Logo-->
 								<a href="../../demo2/dist/landing.html">
-									<img alt="Logo" src="resources/media/logos/landing.svg" class="h-15px h-md-20px" />
+									<img alt="Logo" src="{{ asset('media/dpn/Logo DPN-16.png') }}" class="h-30px h-md-40px" />
 								</a>
 								<!--end::Logo image-->
 								<!--begin::Logo image-->
-								<span class="mx-5 fs-6 fw-semibold text-gray-600 pt-1" href="https://keenthemes.com">&copy; 2023 Keenthemes Inc.</span>
+								<span class="mx-5 fs-6 fw-semibold text-white pt-1">Dewan Pertahanan Nasional
+									</br> &copy; Copyright 2025. All Rights Reserved.</span>
 								<!--end::Logo image-->
 							</div>
 							<!--end::Copyright-->
 							<!--begin::Menu-->
 							<ul class="menu menu-gray-600 menu-hover-primary fw-semibold fs-6 fs-md-5 order-1 mb-5 mb-md-0">
-								<li class="menu-item">
-									<a href="https://keenthemes.com" target="_blank" class="menu-link px-2">About</a>
+								<li class="mx-3 menu-item">
+									<a href="https://www.facebook.com/">
+										<img src="media/svg/brand-logos/facebook-4.svg" class="h-20px me-2" alt="" />
+									</a>
 								</li>
-								<li class="menu-item mx-5">
-									<a href="https://devs.keenthemes.com" target="_blank" class="menu-link px-2">Support</a>
+								<li class="menu-item mx-3">
+									<a href="https://twitter.com/">
+										<img src="media/svg/brand-logos/twitter.svg" class="h-20px me-2" alt="" />
+									</a>
 								</li>
-								<li class="menu-item">
-									<a href="" target="_blank" class="menu-link px-2">Purchase</a>
+								<li class="menu-item mx-3">
+									<a href="https://www.instagram.com/">
+										<img src="media/svg/brand-logos/instagram-2-1.svg" class="h-20px me-2" alt="" />
+									</a>
+								</li>
+								<li class="menu-item mx-3">
+									<a href="https://www.youtube.com/">
+										<img src="media/svg/brand-logos/youtube-3.svg" class="h-20px me-2" alt="" />
+									</a>
 								</li>
 							</ul>
 							<!--end::Menu-->
