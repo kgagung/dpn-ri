@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/strukturOrganisasi', function () {
+    return view('struktur');
+});
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
