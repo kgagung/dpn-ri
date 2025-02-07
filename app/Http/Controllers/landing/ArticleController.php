@@ -14,7 +14,7 @@ class ArticleController extends Controller
             'breadcrumb' => [
                 ['name' => 'Home', 'url' => route('home')],
                 ['name'=> 'Page','url'=> null],
-                ['name' => 'Articles', 'url' => route('article')],
+                ['name' => 'Articles', 'url' => null],
             ],
         ];
         return view('landing.article.list-article', $data);
