@@ -79,13 +79,6 @@ License: For each use you must have a valid license purchased only from above li
 					<div class="card" style="filter: drop-shadow(0px 0px 40px rgba(68, 81, 96, 0.08))">
 						<!--begin::Card body-->
 						<div class="card-body p-lg-20">
-							<!--begin::Heading-->
-							<div class="text-center mb-5 mb-lg-10">
-								<!--begin::Title-->
-								<h3 class="fs-2hx text-dark mb-5" id="portfolio" data-kt-scroll-offset="{default: 100, lg: 250}">Berita</h3>
-								<!--end::Title-->
-							</div>
-							<!--end::Heading-->
 							<!--begin::Tabs wrapper-->
 							<!-- <div class="d-flex flex-center mb-5 mb-lg-15">
 								
@@ -107,145 +100,246 @@ License: For each use you must have a valid license purchased only from above li
 							</div> -->
 							<!--end::Tabs wrapper-->
 							<!--begin::Tabs content-->
-							<div class="tab-content">
-								<!--begin::Tab pane-->
-								<div class="tab-pane fade show active" id="kt_landing_projects_latest">
-									<!--begin::Row-->
-									<div class="row g-10 mb-10">
-										<!--begin::Col-->
-										<div class="col-lg-6">
-											<!--begin::Row-->
-											<div class="row g-10 mb-10">
-												<!--begin::Item-->
-												<a class="d-block card-rounded overlay" data-fslightbox="lightbox-projects" href="{{ asset('media/dpn-berita/img-1905.png') }}">
-													<!--begin::Image-->
-													<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px" style="background-image:url('media/dpn-berita/img-1905.png')">
-														<div class="bgi-no-repeat bgi-position-center bgi-size-cover card-rounded" style="background-color: #292D31; opacity: 90%; position:absolute; background-size: cover; width:93.5%; height:100%;"></div>
-														<h1 style="position: absolute; padding:10%; color: white; font-size: 20px; font-weight: bold; text-align: left; z-index: 2;">Pengalihan Status Kepegawaian CPNS Hasil Pengadaan CPNS Setjen Wantannas RI T.A. 2024</h1>
-														<div class="position-absolute top-75 start-25 translate-middle">
-															<p style="color: white;">JAN 24, 2025</p>
-														</div>
-														<div class="position-absolute top-75 start-50 translate-middle">
-															<p style="color: white;">2 MINS READ</p>
-														</div>
-														<div class="position-absolute top-75 start-75 translate-middle">
-															<p style="color: white;">275 VIEWS</p>
-														</div>
-													</div>
-													<!--end::Image-->
-													<!--begin::Action-->
-													<div class="overlay-layer card-rounded bg-dark bg-opacity-75" style="background-image:url('media/dpn-berita/img-1905.png'); position: absolute; z-index: 10; background-size: cover;">
-														<i class="ki-duotone ki-eye fs-5x text-black">
-															<span class="path1"></span>
-															<span class="path2"></span>
-															<span class="path3"></span>
-														</i>
-													</div>
-													<!--end::Action-->
-												</a>
-												<!--end::Item-->
-											</div>
-											<!--end::Row-->
-											<!--begin::Item-->
-											<a class="d-block card-rounded overlay" data-fslightbox="lightbox-projects" href="{{ asset('media/dpn-berita/301224.jpeg') }}">
-												<!--begin::Image-->
-												<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px" style="background-image:url('media/dpn-berita/301224.jpeg')">
-													<div class="bgi-no-repeat bgi-position-center bgi-size-cover card-rounded" style="background-color: #292D31; opacity: 90%; position:absolute; background-size: cover; width:100%; height:100%;"></div>
-													<h1 style="position: absolute; padding:10%; color: white; font-size: 20px; font-weight: bold; text-align: left; z-index: 2;">Presiden Prabowo Tekankan Pentingnya Perencanaan dalam Pembangunan Nasional Berbasis Ekonomi Pancasila</h1>
-													<div class="position-absolute top-75 start-25 translate-middle">
-														<p style="color: white;">DES 30, 2024</p>
-													</div>
-													<div class="position-absolute top-75 start-50 translate-middle">
-														<p style="color: white;">15 MINS READ</p>
-													</div>
-													<div class="position-absolute top-75 start-75 translate-middle">
-														<p style="color: white;">228 VIEWS</p>
-													</div>
-												</div>
-												<!--end::Image-->
-												<!--begin::Action-->
-												<div class="overlay-layer card-rounded bg-dark bg-opacity-75" style="background-image:url('media/dpn-berita/301224.jpeg'); position: absolute; z-index: 10; background-size: cover;">
-													<i class="ki-duotone ki-eye fs-5x text-black">
-														<span class="path1"></span>
-														<span class="path2"></span>
-														<span class="path3"></span>
-													</i>
-												</div>
-												<!--end::Action-->
-											</a>
-											<!--end::Item-->
-										</div>
-										<!--end::Col-->
-										<!--begin::Col-->
-										<div class="col-lg-6">
-											<!--begin::Row-->
-											<div class="row g-10 mb-10">
-												<!--begin::Item-->
-												<a class="d-block card-rounded overlay" data-fslightbox="lightbox-projects" href="{{ asset('media/dpn-berita/301224-22.jpeg') }}">
-													<!--begin::Image-->
-													<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px" style="background-image:url('media/dpn-berita/301224-22.jpeg')">
-														<div class="bgi-no-repeat bgi-position-center bgi-size-cover card-rounded" style="background-color: #292D31; opacity: 90%; position:absolute; background-size: cover; width:93.5%; height:100%;"></div>
-														<h1 style="position: absolute; padding:10%; color: white; font-size: 20px; font-weight: bold; text-align: left; z-index: 2;">Presiden Prabowo Ambil Keputusan Bersejarah untuk Swasembada Pangan</h1>
-														<div class="position-absolute top-75 start-25 translate-middle">
-															<p style="color: white;">DES 30, 2024</p>
-														</div>
-														<div class="position-absolute top-75 start-50 translate-middle">
-															<p style="color: white;">5 MINS READ</p>
-														</div>
-														<div class="position-absolute top-75 start-75 translate-middle">
-															<p style="color: white;">185 VIEWS</p>
-														</div>
-													</div>
-													<!--end::Image-->
-													<!--begin::Action-->
-													<div class="overlay-layer card-rounded bg-dark bg-opacity-75" style="background-image:url('media/dpn-berita/301224-22.jpeg'); position: absolute; z-index: 10; background-size: cover;">
-														<i class="ki-duotone ki-eye fs-5x text-black">
-															<span class="path1"></span>
-															<span class="path2"></span>
-															<span class="path3"></span>
-														</i>
-													</div>
-													<!--end::Action-->
-												</a>
-												<!--end::Item-->
-											</div>
-											<!--end::Row-->
-											<!--begin::Item-->
-											<a class="d-block card-rounded overlay" data-fslightbox="lightbox-projects" href="{{ asset('media/dpn-berita/281224.jpeg') }}">
-												<!--begin::Image-->
-												<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px" style="background-image:url('media/dpn-berita/281224.jpeg')">
-													<div class="bgi-no-repeat bgi-position-center bgi-size-cover card-rounded" style="background-color: #292D31; opacity: 90%; position:absolute; background-size: cover; width:100%; height:100%;"></div>
-													<h1 style="position: absolute; padding:10%; color: white; font-size: 20px; font-weight: bold; text-align: left; z-index: 2;">Presiden Prabowo Hadiri Perayaan Natal Nasional Tahun 2024</h1>
-													<div class="position-absolute top-75 start-25 translate-middle">
-														<p style="color: white;">DES 30, 2024</p>
-													</div>
-													<div class="position-absolute top-75 start-50 translate-middle">
-														<p style="color: white;">5 MINS READ</p>
-													</div>
-													<div class="position-absolute top-75 start-75 translate-middle">
-														<p style="color: white;">185 VIEWS</p>
-													</div>
-												</div>
-												<!--end::Image-->
-												<!--begin::Action-->
-												<div class="overlay-layer card-rounded bg-dark bg-opacity-75" style="background-image:url('media/dpn-berita/281224.jpeg'); position: absolute; z-index: 10; background-size: cover;">
-													<i class="ki-duotone ki-eye fs-5x text-black">
-														<span class="path1"></span>
-														<span class="path2"></span>
-														<span class="path3"></span>
-													</i>
-												</div>
-												<!--end::Action-->
-											</a>
-											<!--end::Item-->
-										</div>
-										<!--end::Col-->
-									</div>
-									<!--end::Row-->
+							<!--begin::Content-->
+							<div class="mb-17">
+								<!--begin::Content-->
+								<div class="d-flex flex-stack mb-5">
+									<!--begin::Title-->
+									<h3 class="fs-2hx text-dark mb-5" id="portfolio" data-kt-scroll-offset="{default: 100, lg: 250}">{{$pageTitle}}</h3>
+									<!--end::Title-->
+									<!--begin::Link-->
+									<a href="{{ url('/article') }}" class="fs-6 fw-semibold link-primary">View All Article</a>
+									<!--end::Link-->
 								</div>
-								<!--end::Tab pane-->
+								<!--end::Content-->
+								<!--begin::Separator-->
+								<div class="separator separator-dashed mb-9"></div>
+								<!--end::Separator-->
+								<!--begin::Row-->
+								<div class="row g-10">
+									<!--begin::Col-->
+									<div class="col-md-4">
+										<!--begin::Feature post-->
+										<div class="card-xl-stretch me-md-6">
+											<!--begin::Image-->
+											<a class="d-block bgi-no-repeat bgi-size-cover bgi-position-center card-rounded position-relative min-h-175px mb-5"
+												style="background-image: url('{{ $image }}')"
+												href="{{ url('/article/' . Str::slug($newsTitle)) }}">												
+											</a>
+											<!--end::Image-->
+											<!--begin::Body-->
+											<div class="m-0">
+												<!--begin::Title-->
+												<a href="{{ url('/article/' . Str::slug($newsTitle)) }}"
+													class="fs-4 text-dark fw-bold text-hover-primary text-dark lh-base">{{ $newsTitle }}</a>
+												<!--end::Title-->
+												<!--begin::Text-->
+												<div class="fw-semibold fs-5 text-gray-600 text-dark my-4">{{ $snippet }}</div>
+												<!--end::Text-->
+												<!--begin::Content-->
+												<div class="fs-6 fw-bold">
+													<!--begin::Author-->
+													<a href="{{ url('/article/' . Str::slug($newsTitle)) }}"s
+														class="text-gray-700 text-hover-primary">{{ $creator }}</a>
+													<!--end::Author-->
+													<!--begin::Date-->
+													<span class="text-muted">on {{ $newsDate}}</span>
+													<!--end::Date-->
+												</div>
+												<!--end::Content-->
+											</div>
+											<!--end::Body-->
+										</div>
+										<!--end::Feature post-->
+									</div>
+									<!--end::Col-->
+									<!--begin::Col-->
+									<div class="col-md-4">
+										<!--begin::Feature post-->
+										<div class="card-xl-stretch mx-md-3">
+											<!--begin::Image-->
+											<a class="d-block bgi-no-repeat bgi-size-cover bgi-position-center card-rounded position-relative min-h-175px mb-5"
+												style="background-image:url('{{ $image}}')"
+												href="{{ url('/article/' . Str::slug($newsTitle)) }}">
+											</a>
+											<!--end::Image-->
+											<!--begin::Body-->
+											<div class="m-0">
+												<!--begin::Title-->
+												<a href="{{ url('/article/' . Str::slug($newsTitle)) }}"
+													class="fs-4 text-dark fw-bold text-hover-primary text-dark lh-base">{{ $newsTitle}}</a>
+												<!--end::Title-->
+												<!--begin::Text-->
+												<div class="fw-semibold fs-5 text-gray-600 text-dark my-4">{{ $snippet }}</div>
+												<!--end::Text-->
+												<!--begin::Content-->
+												<div class="fs-6 fw-bold">
+													<!--begin::Author-->
+													<a href="{{ url('/article/' . Str::slug($newsTitle)) }}"s
+														class="text-gray-700 text-hover-primary">{{ $creator }}</a>
+													<!--end::Author-->
+													<!--begin::Date-->
+													<span class="text-muted">on {{ $newsDate }}</span>
+													<!--end::Date-->
+												</div>
+												<!--end::Content-->
+											</div>
+											<!--end::Body-->
+										</div>
+										<!--end::Feature post-->
+									</div>
+									<!--end::Col-->
+									<!--begin::Col-->
+									<div class="col-md-4">
+										<!--begin::Feature post-->
+										<div class="card-xl-stretch ms-md-6">
+											<!--begin::Image-->
+											<a class="d-block bgi-no-repeat bgi-size-cover bgi-position-center card-rounded position-relative min-h-175px mb-5"
+												style="background-image:url('{{ $image}}')"
+												data-fslightbox="lightbox-video-tutorials" href="https://www.youtube.com/embed/TWdDZYNqlg4">
+											</a>
+											<!--end::Image-->
+											<!--begin::Body-->
+											<div class="m-0">
+												<!--begin::Title-->
+												<a href="{{ url('/article/' . Str::slug($newsTitle)) }}"s
+													class="fs-4 text-dark fw-bold text-hover-primary text-dark lh-base">{{ $newsTitle }}</a>
+												<!--end::Title-->
+												<!--begin::Text-->
+												<div class="fw-semibold fs-5 text-gray-600 text-dark my-4">{{ $snippet }}</div>
+												<!--end::Text-->
+												<!--begin::Content-->
+												<div class="fs-6 fw-bold">
+													<!--begin::Author-->
+													<a href="{{ url('/article/' . Str::slug($newsTitle)) }}"s
+														class="text-gray-700 text-hover-primary">{{ $creator }}</a>
+													<!--end::Author-->
+													<!--begin::Date-->
+													<span class="text-muted">on {{ $newsDate }}</span>
+													<!--end::Date-->
+												</div>
+												<!--end::Content-->
+											</div>
+											<!--end::Body-->
+										</div>
+										<!--end::Feature post-->
+									</div>
+									<!--end::Col-->
+								</div>
+								<!--end::Row-->
+								<div class="row g-10" style="padding-top: 5%;">
+									<!--begin::Col-->
+									<div class="col-md-4">
+										<!--begin::Feature post-->
+										<div class="card-xl-stretch me-md-6">
+											<!--begin::Image-->
+											<a class="d-block bgi-no-repeat bgi-size-cover bgi-position-center card-rounded position-relative min-h-175px mb-5"
+												style="background-image: url('{{ $image }}')"
+												href="{{ url('/article/' . Str::slug($newsTitle)) }}">
+											</a>
+											<!--end::Image-->
+											<!--begin::Body-->
+											<div class="m-0">
+												<!--begin::Title-->
+												<a href="{{ url('/article/' . Str::slug($newsTitle)) }}"s
+													class="fs-4 text-dark fw-bold text-hover-primary text-dark lh-base">{{ $newsTitle }}</a>
+												<!--end::Title-->
+												<!--begin::Text-->
+												<div class="fw-semibold fs-5 text-gray-600 text-dark my-4">{{ $snippet }}</div>
+												<!--end::Text-->
+												<!--begin::Content-->
+												<div class="fs-6 fw-bold">
+													<!--begin::Author-->
+													<a href="{{ url('/article/' . Str::slug($newsTitle)) }}"s
+														class="text-gray-700 text-hover-primary">{{ $creator }}</a>
+													<!--end::Author-->
+													<!--begin::Date-->
+													<span class="text-muted">on {{ $newsDate}}</span>
+													<!--end::Date-->
+												</div>
+												<!--end::Content-->
+											</div>
+											<!--end::Body-->
+										</div>
+										<!--end::Feature post-->
+									</div>
+									<!--end::Col-->
+									<!--begin::Col-->
+									<div class="col-md-4">
+										<!--begin::Feature post-->
+										<div class="card-xl-stretch mx-md-3">
+											<!--begin::Image-->
+											<a class="d-block bgi-no-repeat bgi-size-cover bgi-position-center card-rounded position-relative min-h-175px mb-5"
+												style="background-image:url('{{ $image}}')"
+												href="{{ url('/article/' . Str::slug($newsTitle)) }}">
+											</a>
+											<!--end::Image-->
+											<!--begin::Body-->
+											<div class="m-0">
+												<!--begin::Title-->
+												<a href="{{ url('/article/' . Str::slug($newsTitle)) }}"s
+													class="fs-4 text-dark fw-bold text-hover-primary text-dark lh-base">{{ $newsTitle}}</a>
+												<!--end::Title-->
+												<!--begin::Text-->
+												<div class="fw-semibold fs-5 text-gray-600 text-dark my-4">{{ $snippet }}</div>
+												<!--end::Text-->
+												<!--begin::Content-->
+												<div class="fs-6 fw-bold">
+													<!--begin::Author-->
+													<a href="{{ url('/article/' . Str::slug($newsTitle)) }}"s
+														class="text-gray-700 text-hover-primary">{{ $creator }}</a>
+													<!--end::Author-->
+													<!--begin::Date-->
+													<span class="text-muted">on {{ $newsDate }}</span>
+													<!--end::Date-->
+												</div>
+												<!--end::Content-->
+											</div>
+											<!--end::Body-->
+										</div>
+										<!--end::Feature post-->
+									</div>
+									<!--end::Col-->
+									<!--begin::Col-->
+									<div class="col-md-4">
+										<!--begin::Feature post-->
+										<div class="card-xl-stretch ms-md-6">
+											<!--begin::Image-->
+											<a class="d-block bgi-no-repeat bgi-size-cover bgi-position-center card-rounded position-relative min-h-175px mb-5"
+												style="background-image:url('{{ $image}}')"
+												data-fslightbox="lightbox-video-tutorials" href="https://www.youtube.com/embed/TWdDZYNqlg4">
+											</a>
+											<!--end::Image-->
+											<!--begin::Body-->
+											<div class="m-0">
+												<!--begin::Title-->
+												<a href="{{ url('/article/' . Str::slug($newsTitle)) }}"s
+													class="fs-4 text-dark fw-bold text-hover-primary text-dark lh-base">{{ $newsTitle }}</a>
+												<!--end::Title-->
+												<!--begin::Text-->
+												<div class="fw-semibold fs-5 text-gray-600 text-dark my-4">{{ $snippet }}</div>
+												<!--end::Text-->
+												<!--begin::Content-->
+												<div class="fs-6 fw-bold">
+													<!--begin::Author-->
+													<a href="{{ url('/article/' . Str::slug($newsTitle)) }}"s
+														class="text-gray-700 text-hover-primary">{{ $creator }}</a>
+													<!--end::Author-->
+													<!--begin::Date-->
+													<span class="text-muted">on {{ $newsDate }}</span>
+													<!--end::Date-->
+												</div>
+												<!--end::Content-->
+											</div>
+											<!--end::Body-->
+										</div>
+										<!--end::Feature post-->
+									</div>
+									<!--end::Col-->
+								</div>
+								<!--end::Row-->
 							</div>
-							<!--end::Tabs content-->
+							<!--end::Content-->
 						</div>
 						<!--end::Card body-->
 					</div>

@@ -13,9 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->name('home');
+Route::prefix('/')->group(function () {
+    Route::get('/', [App\Http\Controllers\landing\ArticleController::class, 'home'])->name('home');
+});
+ 
 
 Route::prefix('article')->group(function () {
     Route::get('/', [App\Http\Controllers\landing\ArticleController::class, 'index'])->name('article');
