@@ -33,6 +33,8 @@ License: For each use you must have a valid license purchased only from above li
 		<link href="{{ asset('plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
 		<link href="{{ asset('css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
 		<!--end::Global Stylesheets Bundle-->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 		<script>// Frame-busting to prevent site from being loaded within a frame without permission (click-jacking) if (window.top != window.self) { window.top.location.replace(window.self.location.href); }</script>
 	</head>
 	<!--end::Head-->
@@ -42,7 +44,7 @@ License: For each use you must have a valid license purchased only from above li
 			<!--begin::Header Section-->
 			<div class="mb-0" id="home">
 				<!--begin::Wrapper-->
-				<div class="bgi-size-cover bgi-position-x-center position-relative" style="background-image: url('media/dpn/WhatsApp Image 2025-02-11 at 17.18.02_6dbf1bb9.jpg')">
+				<div class="bgi-size-cover bgi-position-x-center bgi-position-y-center position-relative" style="background-image: url('media/dpn/Snapinst.app_464666517_2825392564287155_1017401542568064653_n_1080.png')">
 					<div style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: linear-gradient(to top, #182A2C 25%, transparent 40%);opacity: 0.65;pointer-events: none;z-index: 1; "></div>
 						<x-landing.menu />
 						<!--begin::Landing hero-->
