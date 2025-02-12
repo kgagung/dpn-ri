@@ -204,7 +204,8 @@ License: For each use you must have a valid license purchased only from above li
 							<h3 class="fs-2hx text-white mb-5" id="clients" data-kt-scroll-offset="{default: 125, lg: 150}">About Us</h3>
 							<!--end::Title-->
 							<!--begin::Description-->
-							<div class="fs-5 text-white fw-bold" style="text-align: justify; padding-left: 10%; padding-right: 10%">Lorem ipsum odor amet, consectetuer adipiscing elit. Egestas fermentum leo hendrerit diam aptent luctus gravida. Porttitor elit nunc natoque finibus sociosqu. Pretium tellus purus praesent magna tortor mauris conubia ultricies varius. Nibh faucibus consequat laoreet felis tortor suscipit lacinia. Sollicitudin tincidunt sed velit; magna condimentum ultrices vestibulum. Elementum ligula tempor purus duis natoque ad nulla quisque.</div>
+							<div class="fs-5 text-white fw-bold" style="text-align: justify; padding-left: 10%; padding-right: 10%">Unit Kerja Teknologi Informasi DPN merupakan salah satu kelompok kerja Dewan Pertahanan Nasional yang bertugas memberikan dukungan  teknologi dan informasi dalam menjalankan tugas pemberian
+							pertimbangan dan perumusan solusi kebiiakan dalam rangka penetapan kebijakan di bidang pertahanan nasional</div>
 							<!--end::Description-->
 						</div>
 					</div>

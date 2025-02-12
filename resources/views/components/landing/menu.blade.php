@@ -1,12 +1,12 @@
 <!--begin::Header-->
 <div class="landing-header" data-kt-sticky="true" data-kt-sticky-name="landing-header" data-kt-sticky-offset="{default: '200px', lg: '300px'}">
     <!--begin::Container-->
-    <nav class="d-flex align-items-center align-items-center position-relative" style="background: linear-gradient(to right, #F5E4CA 15%, #6E7049 50%, #292D31 85%); z-index: 50; height: 75px;">
+    <nav class="d-flex align-items-center align-items-center position-relative" style="background: linear-gradient(to right, #182A2C 15%, #F40C34 50%); z-index: 50; height: 75px;">
         <div class="menu menu-rounded menu-column menu-lg-row menu-active-bg menu-title-gray-700 menu-state-primary menu-arrow-gray-400 fw-semibold my-5 my-lg-0 align-items-stretch px-2 px-lg-0" id="#kt_header_menu" data-kt-menu="true">
             <div class="text-center">
                 <a href="{{ url('/') }}">
-                <img src="{{ asset('media/dpn/Logo DPN-16.png') }}" 
-                    alt="Logo" class="me-20" style="max-height: 62px; padding-left: 10%">
+                <img src="{{ asset('media/dpn/Logo DPN_atmosphere tulisan putih-14.png') }}" 
+                    alt="Logo" class="me-20" style="max-height: 200px; padding-left: 10%">
                 </a>
             </div>
 
@@ -15,7 +15,7 @@
                 <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion menu-sub-lg-down-indention me-0 me-lg-2">
                     <!--begin:Menu link-->
                     <span class="menu-link py-3">
-                        <span class="menu-title" style="font-size: medium; color: #5C0000;">Profil</span>
+                        <span class="menu-title" style="font-size: medium; color: white;">Profil</span>
                         <span class="menu-arrow d-lg-none"></span>
                     </span>
                     <!--end:Menu link-->
@@ -78,7 +78,7 @@
             </div>
 
             <div class="d-flex align-items-center">
-                <a href="https://analitika.fisipol.unesa.ac.id/" class="nav-link" style="font-size: medium; color: #5C0000;">Geo-Int</a>
+                <a href="https://analitika.fisipol.unesa.ac.id/" class="nav-link" style="font-size: medium; color: white;">Geo-Int</a>
             </div>
         </div>
     </nav>

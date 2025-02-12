@@ -42,8 +42,8 @@ License: For each use you must have a valid license purchased only from above li
 			<!--begin::Header Section-->
 			<div class="mb-0" id="home">
 				<!--begin::Wrapper-->
-				<div class="bgi-size-cover bgi-position-x-center position-relative" style="background-image: url('media/dpn/PelantikanPrabowo.png')">
-					<div style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: linear-gradient(to top, #894C2C 25%, transparent 40%);opacity: 0.65;pointer-events: none;z-index: 1; "></div>
+				<div class="bgi-size-cover bgi-position-x-center position-relative" style="background-image: url('media/dpn/WhatsApp Image 2025-02-11 at 17.18.02_6dbf1bb9.jpg')">
+					<div style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: linear-gradient(to top, #182A2C 25%, transparent 40%);opacity: 0.65;pointer-events: none;z-index: 1; "></div>
 						<x-landing.menu />
 						<!--begin::Landing hero-->
 						<div class="d-flex flex-column flex-end w-100 min-h-350px min-h-lg-500px px-9">
@@ -65,7 +65,7 @@ License: For each use you must have a valid license purchased only from above li
 				<!--begin::Curve bottom-->
 				<div class="landing-curve mb-10 mb-lg-20">
 					<svg viewBox="15 12 1470 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M0 11C3.93573 11.3356 7.85984 11.6689 11.7725 12H1488.16C1492.1 11.6689 1496.04 11.3356 1500 11V12H1488.16C913.668 60.3476 586.282 60.6117 11.7725 12H0V11Z" fill="#894C2C"></path>
+						<path d="M0 11C3.93573 11.3356 7.85984 11.6689 11.7725 12H1488.16C1492.1 11.6689 1496.04 11.3356 1500 11V12H1488.16C913.668 60.3476 586.282 60.6117 11.7725 12H0V11Z" fill="#182A2C"></path>
 					</svg>
 				</div>
 				<!--end::Curve bottom-->

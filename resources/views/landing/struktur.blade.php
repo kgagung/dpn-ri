@@ -17,7 +17,7 @@
             
             <!-- Pastikan ini adalah flex container -->
             <div class="d-flex justify-content-center align-items-center">
-                <img class="w-75" src="{{ asset('media/dpn/Struktur-Organisasi.png') }}" alt="Struktur Organisasi">
+                <img class="w-100" src="{{ asset('media/dpn/Struktur-Organisasi.png') }}" alt="Struktur Organisasi">
             </div>
             
             <!--end::Tabs wrapper-->
