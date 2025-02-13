@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class search-blog extends Component
+class carouselHeader extends Component
 {
     /**
      * Create a new component instance.
@@ -21,6 +21,6 @@ class search-blog extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.landing.search-blog');
+        return view('components.landing.carousel-header');
     }
 }
