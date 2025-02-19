@@ -31,33 +31,44 @@
 </head>
 
 <body id="kt_app_body" data-kt-app-layout="dark-sidebar" data-kt-app-header-fixed="true" data-kt-app-sidebar-enabled="true" data-kt-app-sidebar-fixed="true" data-kt-app-sidebar-hoverable="true" data-kt-app-sidebar-push-header="true" data-kt-app-sidebar-push-toolbar="true" data-kt-app-sidebar-push-footer="true" data-kt-app-toolbar-enabled="true" class="app-default">
+
+    <x-admin._page-loader />
+
+    <!--begin::App-->
     <div class="d-flex flex-column flex-root app-root" id="kt_app_root">
         <!--begin::Page-->
-        <div class="app-page flex-column flex-column-fluid" id="kt_app_page">
+        <div class="app-page  flex-column flex-column-fluid " id="kt_app_page">
+            <x-admin._header />
+            <!--layout-partial:layout/partials/_header.html-->
             <!--begin::Wrapper-->
-            <div class="app-wrapper flex-column flex-row-fluid" id="kt_app_wrapper">
-
-                <x-admin.sidebar />
-
+            <div class="app-wrapper  flex-column flex-row-fluid " id="kt_app_wrapper">
+                <x-admin._sidebar />
+                <!--layout-partial:layout/partials/_sidebar.html-->
                 <!--begin::Main-->
-                <div class="app-main flex-column flex-row-fluid" id="kt_app_main">
+                <div class="app-main flex-column flex-row-fluid " id="kt_app_main">
                     <!--begin::Content wrapper-->
                     <div class="d-flex flex-column flex-column-fluid">
                         <main>
                             {{ $slot }}
                         </main>
                     </div>
+                    <!--end::Content wrapper-->
+                    <x-admin._footer />
+                    <!--layout-partial:layout/partials/_footer.html-->
                 </div>
+                <!--end:::Main-->
             </div>
+            <!--end::Wrapper-->
         </div>
-        <div id="kt_scrolltop" class="scrolltop" data-kt-scrolltop="true">
-            <i class="ki-duotone ki-arrow-up">
-                <span class="path1"></span>
-                <span class="path2"></span>
-            </i>
-        </div>
+        <!--end::Page-->
     </div>
+    <!--end::App-->
 
+    <!--begin::Scrolltop-->
+    <div id="kt_scrolltop" class="scrolltop" data-kt-scrolltop="true">
+        <i class="ki-outline ki-arrow-up"></i>
+    </div>
+    <!--end::Scrolltop-->
 
     <!--begin::Javascript-->
     <script>
