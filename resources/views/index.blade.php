@@ -50,8 +50,7 @@ License: For each use you must have a valid license purchased only from above li
 		<!--begin::Header Section-->
 		<div class="mb-0" id="home">
 			<!--begin::Wrapper-->
-			<div class="bgi-size-cover bgi-position-x-center bgi-position-y-center position-relative"
-				style="background-image: url('media/dpn/Snapinst.app_464666517_2825392564287155_1017401542568064653_n_1080.png')">
+			<div class="bgi-size-cover bgi-position-x-center bgi-position-y-center position-relative">
 				<x-landing.menu />
 
 				<x-landing.carousel-header />

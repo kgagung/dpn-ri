@@ -1,4 +1,4 @@
-<div id="kt_carousel_2_carousel" class="carousel" data-bs-ride="carousel" data-bs-interval="8000">
+<div id="kt_carousel_2_carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="8000">
     <!--begin::Carousel-->
 
     <!--begin::Carousel Indicators-->
@@ -47,7 +47,7 @@
         <!--begin::Item-->
         <div class="carousel-item">
             <div class="bgi-size-cover bgi-position-x-center bgi-position-y-center position-relative"
-                style="background-image: url('media/dpn/Snapinst.app_464666517_2825392564287155_1017401542568064653_n_1080.png')">
+                style="background-image: url('media/dpn/landing-image-1.png')">
                 <div
                     style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: linear-gradient(to top, #182A2C 25%, transparent 40%);opacity: 0.65;pointer-events: none;z-index: 1; ">
                 </div>
