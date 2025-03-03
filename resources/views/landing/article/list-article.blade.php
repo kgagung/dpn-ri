@@ -18,119 +18,80 @@
     <!--end::Separator-->
     <!--begin::Row-->
     <div class="row g-10">
-        <!--begin::Col-->
+        @foreach($newsList as $news)
         <div class="col-md-4">
-            <!--begin::Feature post-->
             <div class="card-xl-stretch me-md-6">
                 <!--begin::Image-->
                 <a class="d-block bgi-no-repeat bgi-size-cover bgi-position-center card-rounded position-relative min-h-175px mb-5"
-                    style="background-image: url('{{ asset($image) }}')"
-                    href="{{ url('/article/' . Str::slug($newsTitle)) }}">
-                    <img class="position-absolute top-50 start-50 translate-middle" alt="" />
+                    style="background-image: url('{{ $news['image'] }}')"
+                    href="{{ route('news.show', $news['slug']) }}">
                 </a>
                 <!--end::Image-->
                 <!--begin::Body-->
                 <div class="m-0">
                     <!--begin::Title-->
-                    <a href="{{ url('/article/' . Str::slug($newsTitle)) }}"
-                        class="fs-4 text-dark fw-bold text-hover-primary text-dark lh-base">{{ $newsTitle }}</a>
+                    <a href="{{ url('/article/' . Str::slug($news['title'])) }}"
+                        class="fs-4 text-dark fw-bold text-hover-primary text-dark lh-base">{{ $news['title'] }}</a>
                     <!--end::Title-->
                     <!--begin::Text-->
-                    <div class="fw-semibold fs-5 text-gray-600 text-dark my-4">{{ $snippet }}</div>
+                    <div class="fw-semibold fs-5 text-gray-600 text-dark my-4">
+                        {{ $news['snippet']}}
+                    </div>
                     <!--end::Text-->
                     <!--begin::Content-->
                     <div class="fs-6 fw-bold">
                         <!--begin::Author-->
-                        <a href="{{ url('/article/' . Str::slug($newsTitle)) }}"
-                            class="text-gray-700 text-hover-primary">{{ $creator }}</a>
+                        <a href="{{ url('/article/' . Str::slug($news['title'])) }}"
+                            class="text-gray-700 text-hover-primary">Admin</a>
                         <!--end::Author-->
                         <!--begin::Date-->
-                        <span class="text-muted">on {{ $newsDate}}</span>
+                        <span class="text-muted">on {{ date('M d, Y', strtotime($news['newsDate'])) }}</span>
                         <!--end::Date-->
                     </div>
                     <!--end::Content-->
                 </div>
                 <!--end::Body-->
             </div>
-            <!--end::Feature post-->
         </div>
-        <!--end::Col-->
-        <!--begin::Col-->
-        <div class="col-md-4">
-            <!--begin::Feature post-->
-            <div class="card-xl-stretch mx-md-3">
-                <!--begin::Image-->
-                <a class="d-block bgi-no-repeat bgi-size-cover bgi-position-center card-rounded position-relative min-h-175px mb-5"
-                    style="background-image:url('{{ $image}}')"
-                    href="{{ url('/article/' . Str::slug($newsTitle)) }}">
-                    <img class="position-absolute top-50 start-50 translate-middle" alt="" />
-                </a>
-                <!--end::Image-->
-                <!--begin::Body-->
-                <div class="m-0">
-                    <!--begin::Title-->
-                    <a href="{{ url('/article/' . Str::slug($newsTitle)) }}"
-                        class="fs-4 text-dark fw-bold text-hover-primary text-dark lh-base">{{ $newsTitle}}</a>
-                    <!--end::Title-->
-                    <!--begin::Text-->
-                    <div class="fw-semibold fs-5 text-gray-600 text-dark my-4">{{ $snippet }}</div>
-                    <!--end::Text-->
-                    <!--begin::Content-->
-                    <div class="fs-6 fw-bold">
-                        <!--begin::Author-->
-                        <a href="{{ url('/article/' . Str::slug($newsTitle)) }}"
-                            class="text-gray-700 text-hover-primary">{{ $creator }}</a>
-                        <!--end::Author-->
-                        <!--begin::Date-->
-                        <span class="text-muted">on {{ $newsDate }}</span>
-                        <!--end::Date-->
-                    </div>
-                    <!--end::Content-->
-                </div>
-                <!--end::Body-->
-            </div>
-            <!--end::Feature post-->
-        </div>
-        <!--end::Col-->
-        <!--begin::Col-->
-        <div class="col-md-4">
-            <!--begin::Feature post-->
-            <div class="card-xl-stretch ms-md-6">
-                <!--begin::Image-->
-                <a class="d-block bgi-no-repeat bgi-size-cover bgi-position-center card-rounded position-relative min-h-175px mb-5"
-                    style="background-image:url('{{ $image}}')"
-                    href="{{ url('/article/' . Str::slug($newsTitle)) }}">
-                    <img class="position-absolute top-50 start-50 translate-middle" alt="" />
-                </a>
-                <!--end::Image-->
-                <!--begin::Body-->
-                <div class="m-0">
-                    <!--begin::Title-->
-                    <a href="{{ url('/article/' . Str::slug($newsTitle)) }}"
-                        class="fs-4 text-dark fw-bold text-hover-primary text-dark lh-base">{{ $newsTitle }}</a>
-                    <!--end::Title-->
-                    <!--begin::Text-->
-                    <div class="fw-semibold fs-5 text-gray-600 text-dark my-4">{{ $snippet }}</div>
-                    <!--end::Text-->
-                    <!--begin::Content-->
-                    <div class="fs-6 fw-bold">
-                        <!--begin::Author-->
-                        <a href="{{ url('/article/' . Str::slug($newsTitle)) }}"
-                            class="text-gray-700 text-hover-primary">{{ $creator }}</a>
-                        <!--end::Author-->
-                        <!--begin::Date-->
-                        <span class="text-muted">on {{ $newsDate }}</span>
-                        <!--end::Date-->
-                    </div>
-                    <!--end::Content-->
-                </div>
-                <!--end::Body-->
-            </div>
-            <!--end::Feature post-->
-        </div>
-        <!--end::Col-->
+        @endforeach
     </div>
     <!--end::Row-->
+    <!-- Pagination -->
+    <ul class="pagination">
+        {{-- Tombol Previous --}}
+        @if ($pagination->onFirstPage())
+        <li class="page-item disabled"><a href="#" class="page-link"><i class="previous"></i></a></li>
+        @else
+        <li class="page-item"><a href="{{ $pagination->previousPageUrl() }}" class="page-link"><i class="previous"></i></a></li>
+        @endif
+
+        {{-- Menentukan batas tampilan halaman --}}
+        @php
+        $totalPages = $pagination->lastPage();
+        $currentPage = $pagination->currentPage();
+        $startPage = max(1, $currentPage - 2);
+        $endPage = min($totalPages, $startPage + 5);
+
+        // Pastikan selalu 6 angka yang ditampilkan jika memungkinkan
+        if ($endPage - $startPage < 5) {
+            $startPage=max(1, $endPage - 5);
+            }
+            @endphp
+
+            {{-- Menampilkan nomor halaman yang sudah dibatasi --}}
+            @for ($i=$startPage; $i <=$endPage; $i++)
+            <li class="page-item {{ $currentPage == $i ? 'active' : '' }}">
+            <a href="{{ $pagination->url($i) }}" class="page-link">{{ $i }}</a>
+            </li>
+            @endfor
+
+            {{-- Tombol Next --}}
+            @if ($pagination->hasMorePages())
+            <li class="page-item"><a href="{{ $pagination->nextPageUrl() }}" class="page-link"><i class="next"></i></a></li>
+            @else
+            <li class="page-item disabled"><a href="#" class="page-link"><i class="next"></i></a></li>
+            @endif
+    </ul>
 </div>
 <!--end::Section-->
 @endsection

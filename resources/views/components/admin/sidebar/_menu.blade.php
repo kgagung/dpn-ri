@@ -60,37 +60,16 @@
                         <div class="menu-item">
                             <!--begin:Menu link--><a
                                 class="menu-link"
-                                href="?page=pages/user-profile/overview"><span class="menu-bullet"><span class="bullet bullet-dot"></span></span><span class="menu-title">Overview</span></a><!--end:Menu link-->
+                                href="{{ route('news.create') }}"><span class="menu-bullet"><span class="bullet bullet-dot"></span></span>
+                                <span class="menu-title">Tambah Berita</span></a><!--end:Menu link-->
                         </div>
-                        <!--end:Menu item--><!--begin:Menu item-->
+                        <!--end:Menu item-->
+                        <!--begin:Menu item-->
                         <div class="menu-item">
                             <!--begin:Menu link--><a
                                 class="menu-link"
-                                href="?page=pages/user-profile/projects"><span class="menu-bullet"><span class="bullet bullet-dot"></span></span><span class="menu-title">Projects</span></a><!--end:Menu link-->
-                        </div>
-                        <!--end:Menu item--><!--begin:Menu item-->
-                        <div class="menu-item">
-                            <!--begin:Menu link--><a
-                                class="menu-link"
-                                href="?page=pages/user-profile/campaigns"><span class="menu-bullet"><span class="bullet bullet-dot"></span></span><span class="menu-title">Campaigns</span></a><!--end:Menu link-->
-                        </div>
-                        <!--end:Menu item--><!--begin:Menu item-->
-                        <div class="menu-item">
-                            <!--begin:Menu link--><a
-                                class="menu-link"
-                                href="?page=pages/user-profile/documents"><span class="menu-bullet"><span class="bullet bullet-dot"></span></span><span class="menu-title">Documents</span></a><!--end:Menu link-->
-                        </div>
-                        <!--end:Menu item--><!--begin:Menu item-->
-                        <div class="menu-item">
-                            <!--begin:Menu link--><a
-                                class="menu-link"
-                                href="?page=pages/user-profile/followers"><span class="menu-bullet"><span class="bullet bullet-dot"></span></span><span class="menu-title">Followers</span></a><!--end:Menu link-->
-                        </div>
-                        <!--end:Menu item--><!--begin:Menu item-->
-                        <div class="menu-item">
-                            <!--begin:Menu link--><a
-                                class="menu-link"
-                                href="?page=pages/user-profile/activity"><span class="menu-bullet"><span class="bullet bullet-dot"></span></span><span class="menu-title">Activity</span></a><!--end:Menu link-->
+                                href="{{ route('news.list') }}"><span class="menu-bullet"><span class="bullet bullet-dot"></span></span>
+                                <span class="menu-title">Daftar Berita</span></a><!--end:Menu link-->
                         </div>
                         <!--end:Menu item-->
                     </div>

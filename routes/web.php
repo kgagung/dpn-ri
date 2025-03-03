@@ -16,11 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('/')->group(function () {
     Route::get('/', [App\Http\Controllers\landing\ArticleController::class, 'home'])->name('home');
 });
- 
+
 
 Route::prefix('article')->group(function () {
     Route::get('/', [App\Http\Controllers\landing\ArticleController::class, 'index'])->name('article');
     Route::get('/{slug}', [App\Http\Controllers\landing\ArticleController::class, 'show'])->name('article.show');
+    Route::get('/article/{slug}', [App\Http\Controllers\landing\ArticleController::class, 'show'])->name('news.show');
 });
 
 Route::get('/strukturOrganisasi', function () {
@@ -28,10 +29,32 @@ Route::get('/strukturOrganisasi', function () {
         'pageTitle' => 'List Artikel',
         'breadcrumb' => [
             ['name' => 'Home', 'url' => route('home')],
-            ['name'=> 'Struktur Organisasi','url'=> null],
+            ['name' => 'Struktur Organisasi', 'url' => null],
         ],
     ];
-    return view('landing.struktur',$data);
+    return view('landing.struktur', $data);
+});
+
+Route::get('/tugasFungsi', function () {
+    $data = [
+        'pageTitle' => 'List Artikel',
+        'breadcrumb' => [
+            ['name' => 'Home', 'url' => route('home')],
+            ['name' => 'Tugas dan Fungsi', 'url' => null],
+        ],
+    ];
+    return view('landing.tugas-fungsi', $data);
+});
+
+Route::get('/visiMisi', function () {
+    $data = [
+        'pageTitle' => 'List Artikel',
+        'breadcrumb' => [
+            ['name' => 'Home', 'url' => route('home')],
+            ['name' => 'Visi dan Misi', 'url' => null],
+        ],
+    ];
+    return view('landing.visi-misi', $data);
 });
 
 Route::middleware([
@@ -39,11 +62,29 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    Route::get('/dashboard', function () {
+    Route::get('/admin', function () {
         return view('dashboard');
     })->name('dashboard');
 });
 
+Route::post('/logout', function () {
+    Illuminate\Support\Facades\Auth::logout();
+    request()->session()->invalidate();
+    request()->session()->regenerateToken();
+    return redirect('/');
+})->name('logout');
+
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin', [App\Http\Controllers\admin\AdminController::class, 'index'])->name('admin.dashboard');
+    Route::get('/admin/news/create', [App\Http\Controllers\admin\NewsController::class, 'create'])->name('news.create');
+    Route::post('/admin/news/store', [App\Http\Controllers\admin\NewsController::class, 'store'])->name('news.store');
+    Route::get('/admin/newsList', [App\Http\Controllers\admin\NewsController::class, 'list'])->name('news.list');
+    Route::get('/admin/newsList/edit/{id}', [App\Http\Controllers\admin\NewsController::class, 'edit'])->name('news.edit');
+    Route::put('/admin/newsList/update/{id}', [App\Http\Controllers\admin\NewsController::class, 'update'])->name('news.update');
+    Route::delete('/admin/newsList/destroy/{id}', [App\Http\Controllers\admin\NewsController::class, 'destroy'])->name('news.destroy');
+    Route::get('/admin/news/check-slug', [App\Http\Controllers\Admin\NewsController::class, 'checkSlug'])->name('news.checkSlug');
+});
+
+Route::get('/admin/news/get-slugs', function () {
+    return response()->json(App\Models\News::pluck('slug')->toArray());
 });

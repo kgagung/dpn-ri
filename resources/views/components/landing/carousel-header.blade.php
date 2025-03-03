@@ -58,7 +58,7 @@
                         <div class="mb-5 mb-lg-10"
                             style="padding-left: 10%; padding-right: 10%; text-align:justify!important;">
                             <!--begin::Title-->
-                            <p class="text-white lh-base" style="font-size: 18px;">DPN1 (Dewan Pertahanan Nasional)
+                            <p class="text-white lh-base" style="font-size: 18px;">DPN (Dewan Pertahanan Nasional)
                                 merupakan Lembaga Non Struktural yang bertugas memberikan pertimbangan dan perumusan
                                 solusi kebijakan di bidang pertahanan nasional yang mencakup kedaulatan negara, keutuhan
                                 wilayah, dan keselamatan bangsa (IPOLEKSOSBUDHANKAM).</p>
@@ -89,7 +89,7 @@
                         <div class="mb-5 mb-lg-10"
                             style="padding-left: 10%; padding-right: 10%; text-align:justify!important;">
                             <!--begin::Title-->
-                            <p class="text-white lh-base" style="font-size: 18px;">DPN2 (Dewan Pertahanan Nasional)
+                            <p class="text-white lh-base" style="font-size: 18px;">DPN (Dewan Pertahanan Nasional)
                                 merupakan Lembaga Non Struktural yang bertugas memberikan pertimbangan dan perumusan
                                 solusi kebijakan di bidang pertahanan nasional yang mencakup kedaulatan negara, keutuhan
                                 wilayah, dan keselamatan bangsa (IPOLEKSOSBUDHANKAM).</p>

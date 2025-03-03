@@ -4,66 +4,111 @@ namespace App\Http\Controllers\landing;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\News;
 
 class ArticleController extends Controller
 {
     public function index()
     {
-        $snippet = 'We’ve been focused on making the from v4 to v5 but we have also not been afraid to step away been focused';
-        $words = explode(' ', $snippet);
-        $shortSnippet = implode(' ', array_slice($words, 0, 15)) . '...';
+        $newsList = News::latest()->paginate(12); // Pagination dengan 12 item per halaman
+
+        if ($newsList->isEmpty()) {
+            return view('index', [
+                'pageTitle' => 'Berita',
+                'breadcrumb' => [
+                    ['name' => 'Home', 'url' => route('home')],
+                    ['name' => 'Page', 'url' => null],
+                    ['name' => 'Berita', 'url' => null],
+                ],
+                'newsList' => [], // Kirim array kosong jika tidak ada berita
+            ]);
+        }
+
+        $formattedNews = $newsList->map(function ($news) {
+            $words = explode(' ', strip_tags($news->content));
+            $shortSnippet = implode(' ', array_slice($words, 0, 15)) . '...';
+
+            return [
+                'title' => $news->title,
+                'snippet' => $shortSnippet,
+                'image' => asset('storage/' . $news->image),
+                'newsDate' => date('M d, Y', strtotime($news->news_date)),
+                'slug' => $news->slug,
+            ];
+        });
+
         $data = [
-            'pageTitle' => 'List Artikel',
+            'pageTitle' => 'Berita',
             'breadcrumb' => [
                 ['name' => 'Home', 'url' => route('home')],
-                ['name'=> 'Page','url'=> null],
+                ['name' => 'Page', 'url' => null],
                 ['name' => 'Articles', 'url' => null],
             ],
-            'image' => 'media/dpn/Strategi Kedaulatan.jpg',
-            'newsTitle' => 'Admin Panel - How To Started the Dashboard Tutorial',
-            'snippet' => $shortSnippet,
-            'creator' => 'Admin',
-            'newsDate' => 'Jan 24, 2025',
+            'newsList' => $formattedNews,
+            'pagination' => $newsList, // Kirim instance pagination ke view
         ];
+
         return view('landing.article.list-article', $data);
     }
 
     public function show($slug)
     {
-        $title = ucwords(str_replace('-', ' ', $slug));
-        
+        // Cari berita berdasarkan slug
+        $news = News::where('slug', $slug)->firstOrFail();
+
         $data = [
             'pageTitle' => 'Article',
             'breadcrumb' => [
                 ['name' => 'Home', 'url' => route('home')],
-                ['name'=> 'Page','url'=> null],
-                ['name' => 'Articles', 'url' => route('article')],
+                ['name' => 'Berita', 'url' => route('article')],
+                ['name' => $news->title, 'url' => null],
             ],
-            'articleTitle' => $slug,
-            'articleDate' => '2021-01-01',
-            'articleImg'=> 'stock/1600x800/img-2.jpg',
-            'content' => 'This is article page'
+            'articleTitle' => $news->title,
+            'articleDate' => $news->news_date,
+            'articleImg' => asset('storage/' . $news->image),
+            'content' => $news->content
         ];
+
         return view('landing.article.article', $data);
     }
 
     public function home()
     {
-        $snippet = 'We’ve been focused on making the from v4 to v5 but we have also not been afraid to step away been focused';
-        $words = explode(' ', $snippet);
-        $shortSnippet = implode(' ', array_slice($words, 0, 15)) . '...';
+        $newsList = News::latest()->take(6)->get();
+
+        if ($newsList->isEmpty()) {
+            return view('index', [
+                'pageTitle' => 'Berita',
+                'breadcrumb' => [
+                    ['name' => 'Home', 'url' => route('home')],
+                    ['name' => 'Page', 'url' => null],
+                    ['name' => 'Berita', 'url' => null],
+                ],
+                'newsList' => [], // Kirim array kosong jika tidak ada berita
+            ]);
+        }
+
+        $formattedNews = $newsList->map(function ($news) {
+            $words = explode(' ', strip_tags($news->content));
+            $shortSnippet = implode(' ', array_slice($words, 0, 15)) . '...';
+
+            return [
+                'title' => $news->title,
+                'snippet' => $shortSnippet,
+                'image' => asset('storage/' . $news->image),
+                'newsDate' => date('M d, Y', strtotime($news->news_date)),
+                'slug' => $news->slug,
+            ];
+        });
+
         $data = [
             'pageTitle' => 'Berita',
             'breadcrumb' => [
                 ['name' => 'Home', 'url' => route('home')],
-                ['name'=> 'Page','url'=> null],
+                ['name' => 'Page', 'url' => null],
                 ['name' => 'Articles', 'url' => null],
             ],
-            'image' => 'media/dpn/Strategi Kedaulatan.jpg',
-            'newsTitle' => 'Admin Panel - How To Started the Dashboard Tutorial',
-            'snippet' => $shortSnippet,
-            'creator' => 'Admin',
-            'newsDate' => 'Jan 24, 2025',
+            'newsList' => $formattedNews,
         ];
         return view('index', $data);
     }

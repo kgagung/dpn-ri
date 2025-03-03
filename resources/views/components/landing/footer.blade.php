@@ -11,8 +11,8 @@
                 <!--end::Title-->
                 <!--begin::Description-->
                 <div class="fs-5 text-white fw-bold" style="text-align: justify; padding-left: 10%; padding-right: 10%">
-                Unit Kerja Teknologi Informasi DPN merupakan salah satu kelompok kerja Dewan Pertahanan Nasional yang bertugas memberikan dukungan  teknologi dan informasi dalam menjalankan tugas pemberian
-                pertimbangan dan perumusan solusi kebiiakan dalam rangka penetapan kebijakan di bidang pertahanan nasional</div>
+                    Unit Kerja Teknologi Informasi DPN merupakan salah satu kelompok kerja Dewan Pertahanan Nasional yang bertugas memberikan dukungan teknologi dan informasi dalam menjalankan tugas pemberian
+                    pertimbangan dan perumusan solusi kebiiakan dalam rangka penetapan kebijakan di bidang pertahanan nasional</div>
                 <!--end::Description-->
             </div>
         </div>
@@ -27,8 +27,8 @@
                 <!--begin::Copyright-->
                 <div class="d-flex align-items-center order-2 order-md-1">
                     <!--begin::Logo-->
-                    <a href="../../demo2/dist/landing.html">
-                        <img alt="Logo" src="{{ asset('media/dpn/Logo DPN-16.png') }}" class="h-30px h-md-40px" />
+                    <a href="/">
+                        <img alt="Logo" src="{{ asset('media/dpn/Logo DPN_atmosphere tulisan putih-14.png') }}" class="h-60px h-md-70px" />
                     </a>
                     <!--end::Logo image-->
                     <!--begin::Logo image-->

@@ -1,7 +1,7 @@
 <!--begin::Logo-->
 <div class="app-sidebar-logo px-6" id="kt_app_sidebar_logo">
     <!--begin::Logo image-->
-    <a href="?page=index">
+    <a href="{{ route('admin.dashboard') }}">
         <img alt="Logo" src="{{ asset('media/dpn/Logo DPN_atmosphere tulisan putih-14.png') }}" class="h-70px app-sidebar-logo-default" />
         <img alt="Logo" src="{{ asset('media/dpn/Logo DPN_atmosphere tulisan putih-14.png') }}" class="h-40px app-sidebar-logo-minimize" />
     </a>

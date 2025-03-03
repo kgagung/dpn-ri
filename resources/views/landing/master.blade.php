@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--
 Author: Keenthemes
@@ -39,7 +38,9 @@ License: For each use you must have a valid license purchased only from above li
     <link href="{{ asset('plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
     <!--end::Global Stylesheets Bundle-->
-    <script>// Frame-busting to prevent site from being loaded within a frame without permission (click-jacking) if (window.top != window.self) { window.top.location.replace(window.self.location.href); }</script>
+    <script>
+        // Frame-busting to prevent site from being loaded within a frame without permission (click-jacking) if (window.top != window.self) { window.top.location.replace(window.self.location.href); }
+    </script>
 </head>
 <!--end::Head-->
 <!--begin::Body-->
@@ -122,7 +123,9 @@ License: For each use you must have a valid license purchased only from above li
     </div>
     <!--end::Scrolltop-->
     <!--begin::Javascript-->
-    <script>var hostUrl = "{{ asset('') }}";</script>
+    <script>
+        var hostUrl = "{{ asset('') }}";
+    </script>
     <!--begin::Global Javascript Bundle(mandatory for all pages)-->
     <script src="{{ asset('plugins/global/plugins.bundle.js') }}"></script>
     <script src="{{ asset('js/scripts.bundle.js') }}"></script>
@@ -136,6 +139,7 @@ License: For each use you must have a valid license purchased only from above li
     <script src="{{ asset('js/custom/pages/pricing/general.js') }}"></script>
     <!--end::Custom Javascript-->
     <!--end::Javascript-->
+    @stack('scripts_page')
 </body>
 <!--end::Body-->
 

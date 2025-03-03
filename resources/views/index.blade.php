@@ -40,7 +40,9 @@ License: For each use you must have a valid license purchased only from above li
 	<!--end::Global Stylesheets Bundle-->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
 	<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-	<script>// Frame-busting to prevent site from being loaded within a frame without permission (click-jacking) if (window.top != window.self) { window.top.location.replace(window.self.location.href); }</script>
+	<script>
+		// Frame-busting to prevent site from being loaded within a frame without permission (click-jacking) if (window.top != window.self) { window.top.location.replace(window.self.location.href); }
+	</script>
 </head>
 <!--end::Head-->
 <!--begin::Body-->
@@ -115,234 +117,44 @@ License: For each use you must have a valid license purchased only from above li
 							<!--end::Separator-->
 							<!--begin::Row-->
 							<div class="row g-10">
-								<!--begin::Col-->
+								@foreach($newsList as $news)
 								<div class="col-md-4">
-									<!--begin::Feature post-->
 									<div class="card-xl-stretch me-md-6">
 										<!--begin::Image-->
 										<a class="d-block bgi-no-repeat bgi-size-cover bgi-position-center card-rounded position-relative min-h-175px mb-5"
-											style="background-image: url('{{ $image }}')"
-											href="{{ url('/article/' . Str::slug($newsTitle)) }}">
+											style="background-image: url('{{ $news['image'] }}')"
+											href="{{ route('news.show', $news['slug']) }}">
 										</a>
 										<!--end::Image-->
 										<!--begin::Body-->
 										<div class="m-0">
 											<!--begin::Title-->
-											<a href="{{ url('/article/' . Str::slug($newsTitle)) }}"
-												class="fs-4 text-dark fw-bold text-hover-primary text-dark lh-base">{{ $newsTitle }}</a>
+											<a href="{{ url('/article/' . Str::slug($news['title'])) }}"
+												class="fs-4 text-dark fw-bold text-hover-primary text-dark lh-base">{{ $news['title'] }}</a>
 											<!--end::Title-->
 											<!--begin::Text-->
-											<div class="fw-semibold fs-5 text-gray-600 text-dark my-4">{{ $snippet }}
+											<div class="fw-semibold fs-5 text-gray-600 text-dark my-4">
+												{{ $news['snippet']}}
 											</div>
 											<!--end::Text-->
 											<!--begin::Content-->
 											<div class="fs-6 fw-bold">
 												<!--begin::Author-->
-												<a href="{{ url('/article/' . Str::slug($newsTitle)) }}" s
-													class="text-gray-700 text-hover-primary">{{ $creator }}</a>
+												<a href="{{ url('/article/' . Str::slug($news['title'])) }}"
+													class="text-gray-700 text-hover-primary">Admin</a>
 												<!--end::Author-->
 												<!--begin::Date-->
-												<span class="text-muted">on {{ $newsDate}}</span>
+												<span class="text-muted">on {{ date('M d, Y', strtotime($news['newsDate'])) }}</span>
 												<!--end::Date-->
 											</div>
 											<!--end::Content-->
 										</div>
 										<!--end::Body-->
 									</div>
-									<!--end::Feature post-->
 								</div>
-								<!--end::Col-->
-								<!--begin::Col-->
-								<div class="col-md-4">
-									<!--begin::Feature post-->
-									<div class="card-xl-stretch mx-md-3">
-										<!--begin::Image-->
-										<a class="d-block bgi-no-repeat bgi-size-cover bgi-position-center card-rounded position-relative min-h-175px mb-5"
-											style="background-image:url('{{ $image}}')"
-											href="{{ url('/article/' . Str::slug($newsTitle)) }}">
-										</a>
-										<!--end::Image-->
-										<!--begin::Body-->
-										<div class="m-0">
-											<!--begin::Title-->
-											<a href="{{ url('/article/' . Str::slug($newsTitle)) }}"
-												class="fs-4 text-dark fw-bold text-hover-primary text-dark lh-base">{{ $newsTitle}}</a>
-											<!--end::Title-->
-											<!--begin::Text-->
-											<div class="fw-semibold fs-5 text-gray-600 text-dark my-4">{{ $snippet }}
-											</div>
-											<!--end::Text-->
-											<!--begin::Content-->
-											<div class="fs-6 fw-bold">
-												<!--begin::Author-->
-												<a href="{{ url('/article/' . Str::slug($newsTitle)) }}" s
-													class="text-gray-700 text-hover-primary">{{ $creator }}</a>
-												<!--end::Author-->
-												<!--begin::Date-->
-												<span class="text-muted">on {{ $newsDate }}</span>
-												<!--end::Date-->
-											</div>
-											<!--end::Content-->
-										</div>
-										<!--end::Body-->
-									</div>
-									<!--end::Feature post-->
-								</div>
-								<!--end::Col-->
-								<!--begin::Col-->
-								<div class="col-md-4">
-									<!--begin::Feature post-->
-									<div class="card-xl-stretch ms-md-6">
-										<!--begin::Image-->
-										<a class="d-block bgi-no-repeat bgi-size-cover bgi-position-center card-rounded position-relative min-h-175px mb-5"
-											style="background-image:url('{{ $image}}')"
-											data-fslightbox="lightbox-video-tutorials"
-											href="https://www.youtube.com/embed/TWdDZYNqlg4">
-										</a>
-										<!--end::Image-->
-										<!--begin::Body-->
-										<div class="m-0">
-											<!--begin::Title-->
-											<a href="{{ url('/article/' . Str::slug($newsTitle)) }}" s
-												class="fs-4 text-dark fw-bold text-hover-primary text-dark lh-base">{{ $newsTitle }}</a>
-											<!--end::Title-->
-											<!--begin::Text-->
-											<div class="fw-semibold fs-5 text-gray-600 text-dark my-4">{{ $snippet }}
-											</div>
-											<!--end::Text-->
-											<!--begin::Content-->
-											<div class="fs-6 fw-bold">
-												<!--begin::Author-->
-												<a href="{{ url('/article/' . Str::slug($newsTitle)) }}" s
-													class="text-gray-700 text-hover-primary">{{ $creator }}</a>
-												<!--end::Author-->
-												<!--begin::Date-->
-												<span class="text-muted">on {{ $newsDate }}</span>
-												<!--end::Date-->
-											</div>
-											<!--end::Content-->
-										</div>
-										<!--end::Body-->
-									</div>
-									<!--end::Feature post-->
-								</div>
-								<!--end::Col-->
+								@endforeach
 							</div>
-							<!--end::Row-->
-							<div class="row g-10" style="padding-top: 5%;">
-								<!--begin::Col-->
-								<div class="col-md-4">
-									<!--begin::Feature post-->
-									<div class="card-xl-stretch me-md-6">
-										<!--begin::Image-->
-										<a class="d-block bgi-no-repeat bgi-size-cover bgi-position-center card-rounded position-relative min-h-175px mb-5"
-											style="background-image: url('{{ $image }}')"
-											href="{{ url('/article/' . Str::slug($newsTitle)) }}">
-										</a>
-										<!--end::Image-->
-										<!--begin::Body-->
-										<div class="m-0">
-											<!--begin::Title-->
-											<a href="{{ url('/article/' . Str::slug($newsTitle)) }}" s
-												class="fs-4 text-dark fw-bold text-hover-primary text-dark lh-base">{{ $newsTitle }}</a>
-											<!--end::Title-->
-											<!--begin::Text-->
-											<div class="fw-semibold fs-5 text-gray-600 text-dark my-4">{{ $snippet }}
-											</div>
-											<!--end::Text-->
-											<!--begin::Content-->
-											<div class="fs-6 fw-bold">
-												<!--begin::Author-->
-												<a href="{{ url('/article/' . Str::slug($newsTitle)) }}" s
-													class="text-gray-700 text-hover-primary">{{ $creator }}</a>
-												<!--end::Author-->
-												<!--begin::Date-->
-												<span class="text-muted">on {{ $newsDate}}</span>
-												<!--end::Date-->
-											</div>
-											<!--end::Content-->
-										</div>
-										<!--end::Body-->
-									</div>
-									<!--end::Feature post-->
-								</div>
-								<!--end::Col-->
-								<!--begin::Col-->
-								<div class="col-md-4">
-									<!--begin::Feature post-->
-									<div class="card-xl-stretch mx-md-3">
-										<!--begin::Image-->
-										<a class="d-block bgi-no-repeat bgi-size-cover bgi-position-center card-rounded position-relative min-h-175px mb-5"
-											style="background-image:url('{{ $image}}')"
-											href="{{ url('/article/' . Str::slug($newsTitle)) }}">
-										</a>
-										<!--end::Image-->
-										<!--begin::Body-->
-										<div class="m-0">
-											<!--begin::Title-->
-											<a href="{{ url('/article/' . Str::slug($newsTitle)) }}" s
-												class="fs-4 text-dark fw-bold text-hover-primary text-dark lh-base">{{ $newsTitle}}</a>
-											<!--end::Title-->
-											<!--begin::Text-->
-											<div class="fw-semibold fs-5 text-gray-600 text-dark my-4">{{ $snippet }}
-											</div>
-											<!--end::Text-->
-											<!--begin::Content-->
-											<div class="fs-6 fw-bold">
-												<!--begin::Author-->
-												<a href="{{ url('/article/' . Str::slug($newsTitle)) }}" s
-													class="text-gray-700 text-hover-primary">{{ $creator }}</a>
-												<!--end::Author-->
-												<!--begin::Date-->
-												<span class="text-muted">on {{ $newsDate }}</span>
-												<!--end::Date-->
-											</div>
-											<!--end::Content-->
-										</div>
-										<!--end::Body-->
-									</div>
-									<!--end::Feature post-->
-								</div>
-								<!--end::Col-->
-								<!--begin::Col-->
-								<div class="col-md-4">
-									<!--begin::Feature post-->
-									<div class="card-xl-stretch ms-md-6">
-										<!--begin::Image-->
-										<a class="d-block bgi-no-repeat bgi-size-cover bgi-position-center card-rounded position-relative min-h-175px mb-5"
-											style="background-image:url('{{ $image}}')"
-											data-fslightbox="lightbox-video-tutorials"
-											href="https://www.youtube.com/embed/TWdDZYNqlg4">
-										</a>
-										<!--end::Image-->
-										<!--begin::Body-->
-										<div class="m-0">
-											<!--begin::Title-->
-											<a href="{{ url('/article/' . Str::slug($newsTitle)) }}" s
-												class="fs-4 text-dark fw-bold text-hover-primary text-dark lh-base">{{ $newsTitle }}</a>
-											<!--end::Title-->
-											<!--begin::Text-->
-											<div class="fw-semibold fs-5 text-gray-600 text-dark my-4">{{ $snippet }}
-											</div>
-											<!--end::Text-->
-											<!--begin::Content-->
-											<div class="fs-6 fw-bold">
-												<!--begin::Author-->
-												<a href="{{ url('/article/' . Str::slug($newsTitle)) }}" s
-													class="text-gray-700 text-hover-primary">{{ $creator }}</a>
-												<!--end::Author-->
-												<!--begin::Date-->
-												<span class="text-muted">on {{ $newsDate }}</span>
-												<!--end::Date-->
-											</div>
-											<!--end::Content-->
-										</div>
-										<!--end::Body-->
-									</div>
-									<!--end::Feature post-->
-								</div>
-								<!--end::Col-->
-							</div>
+
 							<!--end::Row-->
 						</div>
 						<!--end::Content-->
@@ -467,22 +279,6 @@ License: For each use you must have a valid license purchased only from above li
 						<!--end::Items-->
 					</div>
 					<!--end::Statistics-->
-					<!--begin::Testimonial-->
-					<div class="fs-2 fw-semibold text-muted text-center mb-3">
-						<span class="fs-1 lh-1 text-gray-700">“</span>When you care about your topic, you’ll write about
-						it in a
-						<br />
-						<span class="text-gray-700 me-1">more powerful</span>, emotionally expressive way
-						<span class="fs-1 lh-1 text-gray-700">“</span>
-					</div>
-					<!--end::Testimonial-->
-					<!--begin::Author-->
-					<div class="fs-2 fw-semibold text-muted text-center">
-						<a href="../../demo2/dist/account/security.html" class="link-primary fs-4 fw-bold">Marcus
-							Levy,</a>
-						<span class="fs-4 fw-bold text-gray-600">KeenThemes CEO</span>
-					</div>
-					<!--end::Author-->
 				</div>
 				<!--end::Container-->
 			</div>
@@ -509,7 +305,9 @@ License: For each use you must have a valid license purchased only from above li
 		</div>
 		<!--end::Scrolltop-->
 		<!--begin::Javascript-->
-		<script>var hostUrl = "{{ asset('') }}";</script>
+		<script>
+			var hostUrl = "{{ asset('') }}";
+		</script>
 		<!--begin::Global Javascript Bundle(mandatory for all pages)-->
 		<script src="{{ asset('plugins/global/plugins.bundle.js') }}"></script>
 		<script src="{{ asset('js/scripts.bundle.js') }}"></script>
