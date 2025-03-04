@@ -64,7 +64,7 @@ Route::middleware([
 ])->group(function () {
     Route::get('/admin', function () {
         return view('dashboard');
-    })->name('dashboard');
+    })->middleware(['auth', 'verified'])->name('dashboard');
 });
 
 Route::post('/logout', function () {
