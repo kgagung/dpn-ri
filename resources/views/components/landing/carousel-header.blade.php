@@ -16,7 +16,7 @@
         <!--begin::Item-->
         <div class="carousel-item active">
             <div class="bgi-size-cover bgi-position-x-center bgi-position-y-center position-relative"
-                style="background-image: url('media/dpn/Snapinst.app_464666517_2825392564287155_1017401542568064653_n_1080.png')">
+                style="background-image: url('media/dpn/cover2.jpg')">
                 <div
                     style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: linear-gradient(to top, #182A2C 25%, transparent 40%);opacity: 0.65;pointer-events: none;z-index: 1; ">
                 </div>
