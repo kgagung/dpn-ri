@@ -63,8 +63,8 @@ Route::middleware([
     'verified',
 ])->group(function () {
     Route::get('/admin', function () {
-        return view('dashboard');
-    })->middleware(['auth', 'verified'])->name('dashboard');
+        return view('admin.dashboard');
+    })->name('dashboard');
 });
 
 Route::post('/logout', function () {
