@@ -17,9 +17,9 @@
                 <!--end::Mobile menu toggle-->
                 <!--begin::Logo image-->
                 <a href="{{ url('/') }}">
-                    <img alt="Logo" src="{{ asset('media/dpn/Logo DPN_atmosphere tulisan putih-14.png') }}"
+                    <img alt="Logo" src="{{ asset('media/dpn/Logo DPN.png') }}"
                         class="logo-default h-25px h-lg-70px">
-                    <img alt="Logo" src="{{ asset('media/dpn/Logo DPN_atmosphere tulisan putih-14.png') }}"
+                    <img alt="Logo" src="{{ asset('media/dpn/Logo DPN.png') }}"
                         class="logo-sticky h-20px h-lg-70px">
                 </a>
                 <!--end::Logo image-->
@@ -127,7 +127,23 @@
             <!--end::Menu wrapper-->
             <!--begin::Login Button-->
             <div class="ms-auto">
+                @auth
+                <div class="dropdown">
+                    <button class="menu-title btn dropdown-toggle" style="font-size: medium; color: white;" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        {{ Auth::user()->name }}
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                        <li>
+                            <form action="{{ route('logout') }}" method="POST">
+                                @csrf
+                                <button type="submit" class="dropdown-item">Logout</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                @else
                 <a href="{{ url('/login') }}" class="nav-link" style="font-size: medium; color: white;">Login</a>
+                @endauth
             </div>
             <!--end::Login Button-->
         </div>

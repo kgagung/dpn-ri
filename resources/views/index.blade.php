@@ -169,7 +169,8 @@ License: For each use you must have a valid license purchased only from above li
 		<!--begin::Statistics Section-->
 		<div class="mt-sm-n10">
 			<!--begin::Curve top-->
-			<div class="landing-curve" style="color: #F5E4CA;">
+			@auth
+			<div class="landing-curve" style="color: #182A2C;">
 				<svg viewBox="15 -1 1470 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path
 						d="M1 48C4.93573 47.6644 8.85984 47.3311 12.7725 47H1489.16C1493.1 47.3311 1497.04 47.6644 1501 48V47H1489.16C914.668 -1.34764 587.282 -1.61174 12.7725 47H1V48Z"
@@ -282,6 +283,7 @@ License: For each use you must have a valid license purchased only from above li
 				</div>
 				<!--end::Container-->
 			</div>
+			@endauth
 			<!--end::Wrapper-->
 
 			<x-landing.footer />
