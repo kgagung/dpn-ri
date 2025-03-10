@@ -127,6 +127,12 @@
                                 style="font-size: medium; color: white;">Layanan</a>
                         </div>
                         <!--end:Menu item-->
+                        <!--begin:Menu item-->
+                        <div class="d-flex align-items-center px-5">
+                            <a href="{{ url('/contact') }}" class="nav-link"
+                                style="font-size: medium; color: white;">Kontak</a>
+                        </div>
+                        <!--end:Menu item-->
                     </div>
                     <!--end::Menu-->
                 </div>

@@ -68,6 +68,17 @@ Route::get('/layanan', function () {
     return view('landing.layanan', $data);
 });
 
+Route::get('/contact', function () {
+    $data = [
+        'pageTitle' => 'Kontak',
+        'breadcrumb' => [
+            ['name' => 'Home', 'url' => route('home')],
+            ['name' => 'Kontak', 'url' => null],
+        ],
+    ];
+    return view('landing.contact', $data);
+});
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
