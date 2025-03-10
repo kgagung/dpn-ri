@@ -11,15 +11,16 @@
             </div>
             <!--end::Avatar-->
             <!--begin::Username-->
+            @auth
             <div class="d-flex flex-column">
                 <div class="fw-bold d-flex align-items-center fs-5">
-                    Robert Fox
-                    <span class="badge badge-light-success fw-bold fs-8 px-2 py-1 ms-2">Pro</span>
+                    {{ Auth::user()->name }}
                 </div>
                 <a href="#" class="fw-semibold text-muted text-hover-primary fs-7">
-                    robert@kt.com
+                    {{ Auth::user()->email }}
                 </a>
             </div>
+            @endauth
             <!--end::Username-->
         </div>
     </div>

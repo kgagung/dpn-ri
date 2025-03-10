@@ -41,10 +41,10 @@
                             <!--begin:Menu item-->
                             <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
                                 data-kt-menu-placement="bottom-start"
-                                class="menu-item menu-lg-down-accordion menu-sub-lg-down-indention me-0 me-lg-2">
+                                class="menu-item menu-lg-down-accordion menu-sub-lg-down-indention">
                                 <!--begin:Menu link-->
-                                <span class="menu-link py-3">
-                                    <span class="menu-title" style="font-size: medium; color: white;">Profil</span>
+                                <span class="menu-link" style="padding: 0;">
+                                    <span class="menu-title px-5" style="font-size: medium; color: white;">Profil</span>
                                     <span class="menu-arrow d-lg-none"></span>
                                 </span>
                                 <!--end:Menu link-->
@@ -115,11 +115,18 @@
                             </div>
                             <!--end:Menu item-->
                         </div>
-
-                        <div class="d-flex align-items-center">
+                        <!--begin:Menu item-->
+                        <div class="d-flex align-items-center px-5">
                             <a href="https://analitika.fisipol.unesa.ac.id/" class="nav-link"
                                 style="font-size: medium; color: white;">Unit Informatika</a>
                         </div>
+                        <!--end:Menu item-->
+                        <!--begin:Menu item-->
+                        <div class="d-flex align-items-center px-5">
+                            <a href="{{ url('/layanan') }}" class="nav-link"
+                                style="font-size: medium; color: white;">Layanan</a>
+                        </div>
+                        <!--end:Menu item-->
                     </div>
                     <!--end::Menu-->
                 </div>

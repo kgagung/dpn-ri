@@ -37,7 +37,7 @@ Route::get('/strukturOrganisasi', function () {
 
 Route::get('/tugasFungsi', function () {
     $data = [
-        'pageTitle' => 'List Artikel',
+        'pageTitle' => 'Tugas dan Fungsi',
         'breadcrumb' => [
             ['name' => 'Home', 'url' => route('home')],
             ['name' => 'Tugas dan Fungsi', 'url' => null],
@@ -48,13 +48,24 @@ Route::get('/tugasFungsi', function () {
 
 Route::get('/visiMisi', function () {
     $data = [
-        'pageTitle' => 'List Artikel',
+        'pageTitle' => 'Visi dan Misi',
         'breadcrumb' => [
             ['name' => 'Home', 'url' => route('home')],
             ['name' => 'Visi dan Misi', 'url' => null],
         ],
     ];
     return view('landing.visi-misi', $data);
+});
+
+Route::get('/layanan', function () {
+    $data = [
+        'pageTitle' => 'Layanan',
+        'breadcrumb' => [
+            ['name' => 'Home', 'url' => route('home')],
+            ['name' => 'Layanan', 'url' => null],
+        ],
+    ];
+    return view('landing.layanan', $data);
 });
 
 Route::middleware([
