@@ -117,7 +117,7 @@
                         </div>
                         <!--begin:Menu item-->
                         <div class="d-flex align-items-center px-5">
-                            <a href="https://analitika.fisipol.unesa.ac.id/" class="nav-link"
+                            <a href="https://analitika.dpn.life/ " class="nav-link"
                                 style="font-size: medium; color: white;">Unit Informatika</a>
                         </div>
                         <!--end:Menu item-->
