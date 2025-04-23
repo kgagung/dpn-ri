@@ -40,6 +40,8 @@ License: For each use you must have a valid license purchased only from above li
 	<!--end::Global Stylesheets Bundle-->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
 	<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+	<!-- Leaflet CSS -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 	<script>
 		// Frame-busting to prevent site from being loaded within a frame without permission (click-jacking) if (window.top != window.self) { window.top.location.replace(window.self.location.href); }
 	</script>
@@ -169,7 +171,6 @@ License: For each use you must have a valid license purchased only from above li
 		<!--begin::Statistics Section-->
 		<div class="mt-sm-n10">
 			<!--begin::Curve top-->
-			@auth
 			<div class="landing-curve" style="color: #182A2C;">
 				<svg viewBox="15 -1 1470 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path
@@ -183,107 +184,26 @@ License: For each use you must have a valid license purchased only from above li
 				<!--begin::Container-->
 				<div class="container">
 					<!--begin::Heading-->
-					<div class="text-center mt-15 mb-18" id="achievements"
+					<div class="text-center mt-15 mb-3" id="achievements"
 						data-kt-scroll-offset="{default: 100, lg: 150}">
 						<!--begin::Title-->
 						<h3 class="fs-2hx text-black fw-bold mb-5">Persebaran Batalyon</h3>
 						<!--end::Title-->
 						<!--begin::Description-->
-						<div class="fs-5 text-gray-700 fw-bold">Save thousands to millions of bucks by using single tool
-							<br />for different amazing and great useful admin
+						<div class="fs-5 text-gray-700 fw-bold">Persebaran Batalyon yang terletak di seluruh Indonesia
 						</div>
 						<!--end::Description-->
 					</div>
 					<!--end::Heading-->
-					<!--begin::Statistics-->
-					<div class="d-flex flex-center">
-						<!--begin::Items-->
-						<div class="d-flex flex-wrap flex-center justify-content-lg-between mb-15 mx-auto w-xl-900px">
-							<!--begin::Item-->
-							<div class="d-flex flex-column flex-center h-200px w-200px h-lg-250px w-lg-250px m-3 bgi-no-repeat bgi-position-center bgi-size-contain"
-								style="background-image: url('resources/media/svg/misc/octagon.svg')">
-								<!--begin::Symbol-->
-								<i class="ki-duotone ki-element-11 fs-2tx text-white mb-3">
-									<span class="path1"></span>
-									<span class="path2"></span>
-									<span class="path3"></span>
-									<span class="path4"></span>
-								</i>
-								<!--end::Symbol-->
-								<!--begin::Info-->
-								<div class="mb-0">
-									<!--begin::Value-->
-									<div class="fs-lg-2hx fs-2x fw-bold text-white d-flex flex-center">
-										<div class="min-w-70px" data-kt-countup="true" data-kt-countup-value="700"
-											data-kt-countup-suffix="+">0</div>
-									</div>
-									<!--end::Value-->
-									<!--begin::Label-->
-									<span class="text-gray-600 fw-semibold fs-5 lh-0">Known Companies</span>
-									<!--end::Label-->
-								</div>
-								<!--end::Info-->
-							</div>
-							<!--end::Item-->
-							<!--begin::Item-->
-							<div class="d-flex flex-column flex-center h-200px w-200px h-lg-250px w-lg-250px m-3 bgi-no-repeat bgi-position-center bgi-size-contain"
-								style="background-image: url('resources/media/svg/misc/octagon.svg')">
-								<!--begin::Symbol-->
-								<i class="ki-duotone ki-chart-pie-4 fs-2tx text-white mb-3">
-									<span class="path1"></span>
-									<span class="path2"></span>
-									<span class="path3"></span>
-								</i>
-								<!--end::Symbol-->
-								<!--begin::Info-->
-								<div class="mb-0">
-									<!--begin::Value-->
-									<div class="fs-lg-2hx fs-2x fw-bold text-white d-flex flex-center">
-										<div class="min-w-70px" data-kt-countup="true" data-kt-countup-value="80"
-											data-kt-countup-suffix="K+">0</div>
-									</div>
-									<!--end::Value-->
-									<!--begin::Label-->
-									<span class="text-gray-600 fw-semibold fs-5 lh-0">Statistic Reports</span>
-									<!--end::Label-->
-								</div>
-								<!--end::Info-->
-							</div>
-							<!--end::Item-->
-							<!--begin::Item-->
-							<div class="d-flex flex-column flex-center h-200px w-200px h-lg-250px w-lg-250px m-3 bgi-no-repeat bgi-position-center bgi-size-contain"
-								style="background-image: url('resources/media/svg/misc/octagon.svg')">
-								<!--begin::Symbol-->
-								<i class="ki-duotone ki-basket fs-2tx text-white mb-3">
-									<span class="path1"></span>
-									<span class="path2"></span>
-									<span class="path3"></span>
-									<span class="path4"></span>
-								</i>
-								<!--end::Symbol-->
-								<!--begin::Info-->
-								<div class="mb-0">
-									<!--begin::Value-->
-									<div class="fs-lg-2hx fs-2x fw-bold text-white d-flex flex-center">
-										<div class="min-w-70px" data-kt-countup="true" data-kt-countup-value="35"
-											data-kt-countup-suffix="M+">0</div>
-									</div>
-									<!--end::Value-->
-									<!--begin::Label-->
-									<span class="text-gray-600 fw-semibold fs-5 lh-0">Secure Payments</span>
-									<!--end::Label-->
-								</div>
-								<!--end::Info-->
-							</div>
-							<!--end::Item-->
+					<div class="card card-custom gutter-b">
+						<div class="card-body">
+							<div id="kt_leaflet_6" style="height:500px;"></div>
 						</div>
-						<!--end::Items-->
 					</div>
-					<!--end::Statistics-->
 				</div>
 				<!--end::Container-->
 			</div>
-			@endauth
+
 			<!--end::Wrapper-->
 
 			<x-landing.footer />
@@ -313,16 +233,107 @@ License: For each use you must have a valid license purchased only from above li
 		<!--begin::Global Javascript Bundle(mandatory for all pages)-->
 		<script src="{{ asset('plugins/global/plugins.bundle.js') }}"></script>
 		<script src="{{ asset('js/scripts.bundle.js') }}"></script>
+		<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<!--end::Global Javascript Bundle-->
 		<!--begin::Vendors Javascript(used for this page only)-->
-		<script src="{{ asset('plugins/custom/fslightbox/fslightbox.bundle.js') }}"></script>
-		<script src="{{ asset('plugins/custom/typedjs/typedjs.bundle.js') }}"></script>
+		<script src="{{ asset('plugins/custom/fullcalendar/fullcalendar.bundle.js') }}"></script>
+		<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+		<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+		<script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+		<script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
+		<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+		<script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+		<script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+		<script src="https://cdn.amcharts.com/lib/5/geodata/continentsLow.js"></script>
+		<script src="https://cdn.amcharts.com/lib/5/geodata/usaLow.js"></script>
+		<script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZonesLow.js"></script>
+		<script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZoneAreasLow.js"></script>
+		<script src="{{ asset('plugins/custom/datatables/datatables.bundle.js') }}"></script>
 		<!--end::Vendors Javascript-->
 		<!--begin::Custom Javascript(used for this page only)-->
-		<script src="{{ asset('js/custom/landing.js') }}"></script>
-		<script src="{{ asset('js/custom/pages/pricing/general.js') }}"></script>
+		<script src="{{ asset('js/widgets.bundle.js') }}"></script>
+		<script src="{{ asset('js/custom/widgets.js') }}"></script>
+		<script src="{{ asset('js/custom/apps/chat/chat.js') }}"></script>
+		<script src="{{ asset('js/custom/utilities/modals/upgrade-plan.js') }}"></script>
+		<script src="{{ asset('js/custom/utilities/modals/create-app.js') }}"></script>
+		<script src="{{ asset('js/custom/utilities/modals/new-target.js') }}"></script>
+		<script src="{{ asset('js/custom/utilities/modals/users-search.js') }}"></script>
 		<!--end::Custom Javascript-->
 		<!--end::Javascript-->
+
+		<script>
+			// Class definition
+			var KTLeaflet = function() {
+				var demo6 = function() {
+					fetch('/api/titik-batalyon')
+						.then(res => res.json())
+						.then(data => {
+							if (data.length === 0) {
+								console.error('Tidak ada data titik batalyon');
+								return;
+							}
+
+							// Init map
+							var leaflet = new L.Map('kt_leaflet_6', {
+								zoom: 5,
+								center: new L.latLng(-2.5489, 118.0149) // Koordinat Indonesia
+							});
+
+							leaflet.addLayer(new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'));
+
+							L.control.scale().addTo(leaflet);
+
+							var leafletIcon = L.divIcon({
+								html: `<span class="svg-icon svg-icon-danger svg-icon-3x">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
+							<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+								<path d="M5,10.5 C5,6 8,3 12.5,3 C17,3 20,6.75 20,10.5
+								C20,12.8325623 17.8236613,16.03566 13.470984,
+								20.1092932 C12.9154018,20.6292577 12.0585054,
+								20.6508331 11.4774555,20.1594925 C7.15915182,
+								16.5078313 5,13.2880005 5,10.5 Z M12.5,12
+								C13.8807119,12 15,10.8807119 15,9.5
+								C15,8.11928813 13.8807119,7 12.5,7
+								C11.1192881,7 10,8.11928813 10,9.5
+								C10,10.8807119 11.1192881,12 12.5,12 Z"
+								fill="#000000" fill-rule="nonzero"/>
+							</g>
+						</svg></span>`,
+								iconAnchor: [20, 37],
+								popupAnchor: [0, -37],
+								className: 'leaflet-marker'
+							});
+
+							data.forEach(function(item) {
+								// Tukar urutan koordinat jadi [lat, lng]
+								const correctedLoc = [item.loc[1], item.loc[0]];
+
+								const marker = L.marker(correctedLoc, {
+									icon: leafletIcon
+								}).addTo(leaflet);
+
+								marker.bindPopup(`<strong>Lokasi: ${item.WADMKK}, ${item.WADMPR}</strong><br>Kelas Produksi: ${item.Kelas_To_5}`, {
+									closeButton: false
+								});
+							});
+						})
+						.catch(err => {
+							console.error("Gagal memuat data titik batalyon:", err);
+						});
+				}
+
+				return {
+					init: function() {
+						demo6();
+					}
+				};
+			}();
+
+			jQuery(document).ready(function() {
+				KTLeaflet.init();
+			});
+		</script>
 </body>
 <!--end::Body-->
 

@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Models\TitikBatalyon;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,4 +17,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::get('/api/titik-batalyon', function () {
+    return TitikBatalyon::select('WADMKK', 'Kelas_Prod', 'X', 'Y')
+        ->get()
+        ->map(function ($item) {
+            return [
+                'WADMKK' => $item->WADMKK,
+                'Kelas_Prod' => $item->Kelas_Prod,
+                'loc' => [$item->X, $item->Y],
+            ];
+        });
 });

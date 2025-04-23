@@ -5,6 +5,7 @@ namespace App\Http\Controllers\landing;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\News;
+use App\Models\TitikBatalyon;
 
 class ArticleController extends Controller
 {
@@ -111,5 +112,18 @@ class ArticleController extends Controller
             'newsList' => $formattedNews,
         ];
         return view('index', $data);
+    }
+
+    public function apiTitikBatalyon()
+    {
+        $titik = TitikBatalyon::all()->map(function ($item) {
+            return [
+                'loc' => [(float)$item->X, (float)$item->Y],
+                'WADMKK' => $item->WADMKK,
+                'Kelas_Prod' => $item->Kelas_Prod,
+            ];
+        });
+
+        return response()->json($titik);
     }
 }

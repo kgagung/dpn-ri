@@ -155,7 +155,8 @@
                     </ul>
                 </div>
                 @else
-                <a href="{{ url('/login') }}" class="nav-link" style="font-size: medium; color: white;">Login</a>
+                <!-- Tombol login sementara di sembunyikan -->
+                <!-- <a href="{{ url('/login') }}" class="nav-link" style="font-size: medium; color: white;">Login</a> -->
                 @endauth
             </div>
             <!--end::Login Button-->

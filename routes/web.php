@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\TitikBatalyon;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,19 @@ Route::prefix('article')->group(function () {
     Route::get('/', [App\Http\Controllers\landing\ArticleController::class, 'index'])->name('article');
     Route::get('/{slug}', [App\Http\Controllers\landing\ArticleController::class, 'show'])->name('article.show');
     Route::get('/article/{slug}', [App\Http\Controllers\landing\ArticleController::class, 'show'])->name('news.show');
+});
+
+Route::get('/api/titik-batalyon', function () {
+    return TitikBatalyon::select('WADMKK', 'WADMPR', 'Kelas_To_5', 'X', 'Y')
+        ->get()
+        ->map(function ($item) {
+            return [
+                'WADMKK' => $item->WADMKK,
+                'WADMPR' => $item->WADMPR,
+                'Kelas_To_5' => $item->Kelas_To_5,
+                'loc' => [$item->X, $item->Y],
+            ];
+        });
 });
 
 Route::get('/strukturOrganisasi', function () {
