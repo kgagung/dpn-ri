@@ -138,8 +138,13 @@ class NewsController extends Controller
                 Storage::disk('public')->delete($news->image);
             }
 
-            // Upload gambar baru
-            $imagePath = $request->file('image')->store('news_images', 'public');
+            // Format nama file: news_{id}_{timestamp}.{ext}
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $filename = "news_{$news->id}_" . now()->timestamp . ".{$extension}";
+
+            // Simpan file ke folder storage/app/public/news_images
+            $imagePath = $file->storeAs('news_images', $filename, 'public');
         } else {
             // Pertahankan gambar lama jika tidak ada upload baru
             $imagePath = $news->image;
