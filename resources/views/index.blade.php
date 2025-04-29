@@ -187,7 +187,7 @@ License: For each use you must have a valid license purchased only from above li
 					<div class="text-center mt-15 mb-3" id="achievements"
 						data-kt-scroll-offset="{default: 100, lg: 150}">
 						<!--begin::Title-->
-						<h3 class="fs-2hx text-black fw-bold mb-5">Persebaran Batalyon</h3>
+						<h3 class="fs-2hx text-black fw-bold mb-5">Persebaran Batalyon Pangan</h3>
 						<!--end::Title-->
 						<!--begin::Description-->
 						<div class="fs-5 text-gray-700 fw-bold">Persebaran Batalyon yang terletak di seluruh Indonesia
