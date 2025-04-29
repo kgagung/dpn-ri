@@ -123,7 +123,7 @@ class NewsController extends Controller
         $news = News::findOrFail($id);
         $slug = Str::slug($request->title);
 
-        // Cek jika slug sudah ada
+        // Buat slug unik
         $counter = 1;
         $originalSlug = $slug;
         while (News::where('slug', $slug)->where('id', '!=', $id)->exists()) {
@@ -131,19 +131,24 @@ class NewsController extends Controller
             $counter++;
         }
 
-        // Update berita
-        $imagePath = $news->image;
+        // Cek dan proses gambar
         if ($request->hasFile('image')) {
             // Hapus gambar lama jika ada
-            if ($news->image) {
+            if ($news->image && Storage::disk('public')->exists($news->image)) {
                 Storage::disk('public')->delete($news->image);
             }
-            // Simpan gambar baru
+
+            // Upload gambar baru
             $imagePath = $request->file('image')->store('news_images', 'public');
+        } else {
+            // Pertahankan gambar lama jika tidak ada upload baru
+            $imagePath = $news->image;
         }
 
+        // Update data berita
         $news->update([
             'title' => $request->title,
+            'slug' => $slug,
             'content' => $request->content,
             'news_date' => $request->news_date,
             'image' => $imagePath,
