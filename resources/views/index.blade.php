@@ -266,7 +266,7 @@ License: For each use you must have a valid license purchased only from above li
 			// Class definition
 			var KTLeaflet = function() {
 				var demo6 = function() {
-					fetch('/api/titik-batalyon')
+					fetch('/api/batalyon-maps')
 						.then(res => res.json())
 						.then(data => {
 							if (data.length === 0) {
