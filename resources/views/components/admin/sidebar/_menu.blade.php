@@ -19,24 +19,24 @@
                 id="#kt_app_sidebar_menu"
                 data-kt-menu="true"
                 data-kt-menu-expand="false">
-                <!--begin:Menu item-->
+                <!-- begin:Menu item-->
                 <div class="menu-item">
                     <!--begin:Menu link-->
-                    <a class="menu-link" href="?page=layout-builder"><span class="menu-icon"><i class="ki-solid ki-monitor-mobile"></i></span>
+                    <!-- <a class="menu-link" href="?page=layout-builder"><span class="menu-icon"><i class="ki-solid ki-monitor-mobile"></i></span>
                         <span class="menu-title">Proyek</span>
-                    </a>
+                    </a> -->
                     <!--end:Menu link-->
                 </div>
                 <!--end:Menu item-->
                 <!--begin:Menu item-->
                 <div class="menu-item">
                     <!--begin:Menu link-->
-                    <a class="menu-link" href="?page=layout-builder"><span class="menu-icon"><i class="ki-outline ki-abstract-13 fs-2"></i></span>
+                    <!-- <a class="menu-link" href="?page=layout-builder"><span class="menu-icon"><i class="ki-outline ki-abstract-13 fs-2"></i></span>
                         <span class="menu-title">Data Infrastruktur</span>
-                    </a>
+                    </a> -->
                     <!--end:Menu link-->
                 </div>
-                <!--end:Menu item-->
+                <!--end:Menu item -->
                 <!--begin:Menu item-->
                 <div class="menu-item pt-5">
                     <!--begin:Menu content-->
@@ -45,7 +45,8 @@
                     </div>
                     <!--end:Menu content-->
                 </div>
-                <!--end:Menu item--><!--begin:Menu item-->
+                <!--end:Menu item-->
+                <!--begin:Menu item-->
                 <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                     <!--begin:Menu link-->
                     <span class="menu-link">
@@ -75,7 +76,31 @@
                     </div>
                     <!--end:Menu sub-->
                 </div>
-                <!--end:Menu item--><!--begin:Menu item-->
+                <!--end:Menu item-->
+                <!--begin:Menu item-->
+                <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                    <!--begin:Menu link-->
+                    <span class="menu-link">
+                        <span class="menu-icon">
+                            <i class="ki-outline ki-address-book fs-2"></i></span>
+                        <span class="menu-title">Peta</span>
+                        <span class="menu-arrow"></span></span>
+                    <!--end:Menu link-->
+                    <!--begin:Menu sub-->
+                    <div class="menu-sub menu-sub-accordion">
+                        <!--begin:Menu item-->
+                        <div class="menu-item">
+                            <!--begin:Menu link--><a
+                                class="menu-link"
+                                href="{{ route('batalyon-maps.list') }}"><span class="menu-bullet"><span class="bullet bullet-dot"></span></span>
+                                <span class="menu-title">Daftar Persebaran Batalyon</span></a><!--end:Menu link-->
+                        </div>
+                        <!--end:Menu item-->
+                    </div>
+                    <!--end:Menu sub-->
+                </div>
+                <!--end:Menu item-->
+                <!--begin:Menu item-->
                 <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                     <!--begin:Menu link--><span class="menu-link"><span class="menu-icon"><i class="ki-outline ki-element-plus fs-2"></i></span><span class="menu-title">Account</span><span class="menu-arrow"></span></span><!--end:Menu link--><!--begin:Menu sub-->
                     <div class="menu-sub menu-sub-accordion">

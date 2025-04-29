@@ -13,7 +13,7 @@
         <!--begin::Mobile logo-->
         <div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
             <a href="?page=index" class="d-lg-none">
-                <img alt="Logo" src="assets/media/logos/default-small.svg" class="h-30px" />
+                <img alt="Logo" src="{{ asset('media/dpn/Logo DPN_atmosphere tulisan putih-14.png') }}" class="h-30px app-sidebar-logo-default" />
             </a>
         </div>
         <!--end::Mobile logo-->

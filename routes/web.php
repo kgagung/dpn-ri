@@ -25,7 +25,7 @@ Route::prefix('article')->group(function () {
     Route::get('/article/{slug}', [App\Http\Controllers\landing\ArticleController::class, 'show'])->name('news.show');
 });
 
-Route::get('/api/titik-batalyon', function () {
+Route::get('/api/batalyon-maps', function () {
     return TitikBatalyon::select('WADMKK', 'WADMPR', 'Kelas_To_5', 'X', 'Y')
         ->get()
         ->map(function ($item) {
@@ -119,6 +119,10 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::put('/admin/newsList/update/{id}', [App\Http\Controllers\admin\NewsController::class, 'update'])->name('news.update');
     Route::delete('/admin/newsList/destroy/{id}', [App\Http\Controllers\admin\NewsController::class, 'destroy'])->name('news.destroy');
     Route::get('/admin/news/check-slug', [App\Http\Controllers\Admin\NewsController::class, 'checkSlug'])->name('news.checkSlug');
+    Route::get('/admin/batalyon-maps', [App\Http\Controllers\admin\BatalyonController::class, 'list'])->name('batalyon-maps.list');
+    Route::delete('/admin/batalyon-maps/destroy/{id}', [App\Http\Controllers\admin\BatalyonController::class, 'destroy'])->name('batalyon-maps.destroy');
+    Route::get('/admin/batalyon-maps/edit/{id}', [App\Http\Controllers\admin\BatalyonController::class, 'edit'])->name('batalyon-maps.edit');
+    Route::put('/admin/batalyon-maps/update/{id}', [App\Http\Controllers\admin\BatalyonController::class, 'update'])->name('batalyon-maps.update');
 });
 
 Route::get('/admin/news/get-slugs', function () {
