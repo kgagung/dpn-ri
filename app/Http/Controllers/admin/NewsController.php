@@ -4,7 +4,6 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use App\Models\News;
 use Yajra\DataTables\Facades\DataTables;
@@ -18,7 +17,6 @@ class NewsController extends Controller
 
     public function store(Request $request)
     {
-        // Cek apakah berita dengan judul yang sama sudah ada
         if (News::where('title', $request->title)->exists()) {
             return redirect()->route('news.create')->with('error', 'Judul berita sudah ada! Silakan gunakan judul lain.');
         }
@@ -30,7 +28,6 @@ class NewsController extends Controller
             'news_date' => 'required|date',
         ]);
 
-        // Buat slug unik dari title
         $slug = Str::slug($request->title);
         $counter = 1;
         $originalSlug = $slug;
@@ -39,25 +36,25 @@ class NewsController extends Controller
             $counter++;
         }
 
-        // Simpan berita ke database terlebih dahulu untuk mendapatkan ID
         $news = News::create([
             'title' => $request->title,
             'content' => $request->content,
             'news_date' => $request->news_date,
-            'slug' => $slug, // Simpan slug unik
+            'slug' => $slug,
         ]);
 
-        // Proses upload gambar jika ada
         if ($request->hasFile('image')) {
             $file = $request->file('image');
-            $extension = $file->getClientOriginalExtension(); // Dapatkan ekstensi file
-            $filename = "news_{$news->id}_" . now()->timestamp . ".{$extension}"; // Format nama file
+            $extension = $file->getClientOriginalExtension();
+            $filename = "news_{$news->id}_" . now()->timestamp . ".{$extension}";
 
-            // Simpan file dengan nama baru ke dalam folder storage/app/public/news_images
-            $imagePath = $file->storeAs('news_images', $filename, 'public');
+            $destinationPath = '/home/dpnriweb/public_html/storages/news_images';
+            if (!file_exists($destinationPath)) {
+                mkdir($destinationPath, 0755, true);
+            }
 
-            // Update path gambar ke database
-            $news->update(['image' => $imagePath]);
+            $file->move($destinationPath, $filename);
+            $news->update(['image' => "storages/news_images/{$filename}"]);
         }
 
         return redirect()->route('news.create')->with('success', 'Berita berhasil ditambahkan!');
@@ -65,8 +62,8 @@ class NewsController extends Controller
 
     public function checkSlug(Request $request)
     {
-        $slug = Str::slug($request->title); // Generate slug dari judul
-        $exists = News::where('slug', $slug)->exists(); // Cek apakah slug sudah ada
+        $slug = Str::slug($request->title);
+        $exists = News::where('slug', $slug)->exists();
 
         return response()->json(['exists' => $exists]);
     }
@@ -78,7 +75,7 @@ class NewsController extends Controller
             return DataTables::of($news)
                 ->addColumn('action', function ($row) {
                     return '<button class="btn btn-warning btn-sm edit-btn" data-id="' . $row->id . '">Edit</button>
-                        <button class="btn btn-sm btn-danger delete-btn" data-id="' . $row->id . '">Hapus</button>';
+                            <button class="btn btn-sm btn-danger delete-btn" data-id="' . $row->id . '">Hapus</button>';
                 })
                 ->editColumn('news_date', function ($row) {
                     return date('d-m-Y', strtotime($row->news_date));
@@ -94,14 +91,14 @@ class NewsController extends Controller
     {
         $news = News::findOrFail($id);
 
-        // Hapus gambar jika ada
         if ($news->image) {
-            Storage::disk('public')->delete($news->image);
+            $imagePath = '/home/dpnriweb/public_html/' . $news->image;
+            if (file_exists($imagePath)) {
+                unlink($imagePath);
+            }
         }
 
-        // Hapus berita dari database
         $news->delete();
-
         return response()->json(['success' => 'Berita berhasil dihapus!']);
     }
 
@@ -123,7 +120,6 @@ class NewsController extends Controller
         $news = News::findOrFail($id);
         $slug = Str::slug($request->title);
 
-        // Buat slug unik
         $counter = 1;
         $originalSlug = $slug;
         while (News::where('slug', $slug)->where('id', '!=', $id)->exists()) {
@@ -131,26 +127,29 @@ class NewsController extends Controller
             $counter++;
         }
 
-        // Cek dan proses gambar
         if ($request->hasFile('image')) {
-            // Hapus gambar lama jika ada
-            if ($news->image && Storage::disk('public')->exists($news->image)) {
-                Storage::disk('public')->delete($news->image);
+            if ($news->image) {
+                $oldImagePath = '/home/dpnriweb/public_html/' . $news->image;
+                if (file_exists($oldImagePath)) {
+                    unlink($oldImagePath);
+                }
             }
 
-            // Format nama file: news_{id}_{timestamp}.{ext}
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension();
             $filename = "news_{$news->id}_" . now()->timestamp . ".{$extension}";
 
-            // Simpan file ke folder storage/app/public/news_images
-            $imagePath = $file->storeAs('news_images', $filename, 'public');
+            $destinationPath = '/home/dpnriweb/public_html/storages/news_images';
+            if (!file_exists($destinationPath)) {
+                mkdir($destinationPath, 0755, true);
+            }
+
+            $file->move($destinationPath, $filename);
+            $imagePath = "storages/news_images/{$filename}";
         } else {
-            // Pertahankan gambar lama jika tidak ada upload baru
             $imagePath = $news->image;
         }
 
-        // Update data berita
         $news->update([
             'title' => $request->title,
             'slug' => $slug,
