@@ -48,13 +48,13 @@ class NewsController extends Controller
             $extension = $file->getClientOriginalExtension();
             $filename = "news_{$news->id}_" . now()->timestamp . ".{$extension}";
 
-            $destinationPath = '/home/dpnriweb/public_html/storages/news_images';
+            $destinationPath = '/home/dpnriweb/public_html/storage/news_images';
             if (!file_exists($destinationPath)) {
                 mkdir($destinationPath, 0755, true);
             }
 
             $file->move($destinationPath, $filename);
-            $news->update(['image' => "storages/news_images/{$filename}"]);
+            $news->update(['image' => "storage/news_images/{$filename}"]);
         }
 
         return redirect()->route('news.create')->with('success', 'Berita berhasil ditambahkan!');
@@ -139,13 +139,13 @@ class NewsController extends Controller
             $extension = $file->getClientOriginalExtension();
             $filename = "news_{$news->id}_" . now()->timestamp . ".{$extension}";
 
-            $destinationPath = '/home/dpnriweb/public_html/storages/news_images';
+            $destinationPath = '/home/dpnriweb/public_html/storage/news_images';
             if (!file_exists($destinationPath)) {
                 mkdir($destinationPath, 0755, true);
             }
 
             $file->move($destinationPath, $filename);
-            $imagePath = "storages/news_images/{$filename}";
+            $imagePath = "storage/news_images/{$filename}";
         } else {
             $imagePath = $news->image;
         }
