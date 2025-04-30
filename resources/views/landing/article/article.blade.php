@@ -43,7 +43,8 @@
             <!--begin::Description-->
             <div class="fs-5 fw-semibold text-gray-600">
                 <!--begin::Text-->
-                <p class="mb-8">{!! $content !!}</p>
+                <p class="mb-8" style="text-align: justify;">{!! $content !!}</p>
+
                 <!--end::Text-->
             </div>
             <!--end::Description-->
