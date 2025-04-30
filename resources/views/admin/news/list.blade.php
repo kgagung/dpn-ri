@@ -118,7 +118,8 @@
 
                     // Tampilkan gambar lama jika ada
                     if (data.image) {
-                        $('#edit_image_preview').attr('src', data.image).show();
+                        const fullImageUrl = "https://dpnri.web.id/storage/" + data.image;
+                        $('#edit_image_preview').attr('src', fullImageUrl).show();
                     } else {
                         $('#edit_image_preview').hide();
                     }
