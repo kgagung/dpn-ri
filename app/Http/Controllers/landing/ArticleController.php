@@ -4,7 +4,6 @@ namespace App\Http\Controllers\landing;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
 use App\Models\News;
 use App\Models\TitikBatalyon;
 
@@ -113,22 +112,6 @@ class ArticleController extends Controller
             'newsList' => $formattedNews,
         ];
         return view('index', $data);
-    }
-
-    public function recentPost()
-    {
-        $recentPosts = News::orderBy('news_date', 'desc')->take(4)->get();
-
-        $formattedPosts = $recentPosts->map(function ($news) {
-            return [
-                'title' => $news->title,
-                'image' => asset('storage/' . $news->image),
-                'snippet' => Str::limit(strip_tags($news->content), 15, '...'),
-                'slug' => $news->slug,
-            ];
-        });
-
-        return view('components.landing.recent-post', ['recentPosts' => $formattedPosts]);
     }
 
     public function apiTitikBatalyon()
