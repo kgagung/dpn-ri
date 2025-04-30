@@ -36,9 +36,12 @@
                     <input type="date" class="form-control" id="edit_news_date" required>
                 </div>
                 <div class="mb-3">
-                    <label for="edit_content" class="form-label">Isi Berita</label>
-                    <textarea class="form-control" id="edit_content" rows="5" required></textarea>
+                    <label for="content">Isi Berita</label>
+                    <div class="py-5" data-bs-theme="light">
+                        <textarea name="content" id="kt_docs_ckeditor_classic"></textarea>
+                    </div>
                 </div>
+
                 <div class="mb-3">
                     <label for="edit_image" class="form-label">Gambar Berita</label>
                     <input type="file" class="form-control" id="edit_image">
@@ -50,6 +53,19 @@
     </div>
 
     @push('scripts_page')
+
+    <script>
+        let ckeditorInstance;
+        ClassicEditor
+            .create(document.querySelector('#kt_docs_ckeditor_classic'))
+            .then(editor => {
+                ckeditorInstance = editor;
+            })
+            .catch(error => {
+                console.error("CKEditor Error:", error);
+            });
+    </script>
+
     <script>
         $(document).ready(function() {
             $('#newsTable').DataTable({
@@ -89,7 +105,11 @@
                     $('#edit_id').val(data.id);
                     $('#edit_title').val(data.title);
                     $('#edit_news_date').val(data.news_date);
-                    $('#edit_content').val(data.content);
+
+                    // Tunggu CKEditor terinisialisasi
+                    if (ckeditorInstance) {
+                        ckeditorInstance.setData(data.content);
+                    }
 
                     // Tampilkan kembali form edit
                     $('#newsTableSection').hide();
@@ -109,15 +129,16 @@
                 let newsId = $('#edit_id').val();
                 let formData = new FormData(this);
 
-                // Pastikan CSRF token ditambahkan
                 formData.append('_method', 'PUT');
                 formData.append('_token', '{{ csrf_token() }}');
                 formData.append('title', $('#edit_title').val());
                 formData.append('news_date', $('#edit_news_date').val());
-                formData.append('content', $('#edit_content').val());
 
-                // Tambahkan gambar jika ada file baru yang di-upload
-                let file = $('#edit_image')[0].files[0];
+                // Ambil data dari CKEditor
+                let content = ckeditorInstance.getData();
+                formData.append('content', content);
+
+                let file = $('#edit_image')[0]?.files[0];
                 if (file) {
                     formData.append('image', file);
                 }
@@ -130,12 +151,8 @@
                     contentType: false,
                     success: function(response) {
                         alert(response.success);
-
-                        // Sembunyikan form edit & tampilkan kembali tabel setelah update berhasil
                         $('#editNewsSection').hide();
                         $('#newsTableSection').show();
-
-                        // Reload DataTable agar data terbaru muncul
                         $('#newsTable').DataTable().ajax.reload();
                     },
                     error: function(xhr) {
