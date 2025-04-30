@@ -103,6 +103,7 @@
     <script src="{{ asset('js/custom/utilities/modals/create-app.js') }}"></script>
     <script src="{{ asset('js/custom/utilities/modals/new-target.js') }}"></script>
     <script src="{{ asset('js/custom/utilities/modals/users-search.js') }}"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
     <!--end::Custom Javascript-->
     <!--end::Javascript-->
     @stack('scripts_page')
