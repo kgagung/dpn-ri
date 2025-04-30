@@ -23,7 +23,7 @@
             <div class="card-xl-stretch me-md-6">
                 <!--begin::Image-->
                 <a class="d-block bgi-no-repeat bgi-size-cover bgi-position-center card-rounded position-relative min-h-175px mb-5"
-                    style="background-image: url('{{ $news['image'] }}')"
+                    style="background-image: url('{{ asset($news['image']) }}')"
                     href="{{ route('news.show', $news['slug']) }}">
                 </a>
                 <!--end::Image-->
