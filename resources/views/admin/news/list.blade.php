@@ -45,6 +45,11 @@
                 <div class="mb-3">
                     <label for="edit_image" class="form-label">Gambar Berita</label>
                     <input type="file" class="form-control" id="edit_image">
+
+                    <!-- Preview gambar yang sudah ada -->
+                    <div id="currentImagePreview" class="mt-3">
+                        <img id="edit_image_preview" src="" alt="Gambar Berita Saat Ini" style="max-height: 200px;">
+                    </div>
                 </div>
                 <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
                 <button type="button" id="cancelEdit" class="btn btn-secondary">Batal</button>
@@ -109,6 +114,13 @@
                     // Tunggu CKEditor terinisialisasi
                     if (ckeditorInstance) {
                         ckeditorInstance.setData(data.content);
+                    }
+
+                    // Tampilkan gambar lama jika ada
+                    if (data.image) {
+                        $('#edit_image_preview').attr('src', data.image).show();
+                    } else {
+                        $('#edit_image_preview').hide();
                     }
 
                     // Tampilkan kembali form edit
