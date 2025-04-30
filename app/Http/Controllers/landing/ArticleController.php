@@ -11,7 +11,7 @@ class ArticleController extends Controller
 {
     public function index()
     {
-        $newsList = News::latest()->paginate(12); // Pagination dengan 12 item per halaman
+        $newsList = News::orderBy('news_date', 'desc')->paginate(12); // Pagination dengan 12 item per halaman
 
         if ($newsList->isEmpty()) {
             return view('index', [
@@ -75,7 +75,7 @@ class ArticleController extends Controller
 
     public function home()
     {
-        $newsList = News::latest()->take(6)->get();
+        $newsList = News::orderBy('news_date', 'desc')->take(6)->get();
 
         if ($newsList->isEmpty()) {
             return view('index', [
