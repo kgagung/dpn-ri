@@ -87,7 +87,13 @@
                     },
                     {
                         data: 'content',
-                        name: 'content'
+                        name: 'content',
+                        render: function(data, type, row) {
+                            // Menghapus tag HTML dan memotong jadi 50 kata
+                            let text = $('<div>').html(data).text(); // strip HTML
+                            let words = text.split(/\s+/).slice(0, 50).join(' ');
+                            return `<div>${words}...</div>`;
+                        }
                     },
                     {
                         data: 'news_date',
