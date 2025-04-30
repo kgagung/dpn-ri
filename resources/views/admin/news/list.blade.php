@@ -77,6 +77,9 @@
                 processing: true,
                 serverSide: true,
                 ajax: "{{ route('news.list') }}",
+                order: [
+                    [3, 'desc']
+                ],
                 columns: [{
                         data: 'id',
                         name: 'id'
