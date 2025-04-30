@@ -54,7 +54,7 @@ class NewsController extends Controller
             }
 
             $file->move($destinationPath, $filename);
-            $news->update(['image' => "storage/news_images/{$filename}"]);
+            $news->update(['image' => "news_images/{$filename}"]);
         }
 
         return redirect()->route('news.create')->with('success', 'Berita berhasil ditambahkan!');
@@ -145,7 +145,7 @@ class NewsController extends Controller
             }
 
             $file->move($destinationPath, $filename);
-            $imagePath = "storage/news_images/{$filename}";
+            $imagePath = "news_images/{$filename}";
         } else {
             $imagePath = $news->image;
         }
