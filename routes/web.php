@@ -121,6 +121,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin/news/check-slug', [App\Http\Controllers\Admin\NewsController::class, 'checkSlug'])->name('news.checkSlug');
     Route::get('/admin/batalyon-maps', [App\Http\Controllers\admin\BatalyonController::class, 'list'])->name('batalyon-maps.list');
     Route::delete('/admin/batalyon-maps/destroy/{id}', [App\Http\Controllers\admin\BatalyonController::class, 'destroy'])->name('batalyon-maps.destroy');
+    Route::post('/admin/batalyon-maps/store', [App\Http\Controllers\admin\BatalyonController::class, 'store'])->name('batalyon-maps.store');
     Route::get('/admin/batalyon-maps/edit/{id}', [App\Http\Controllers\admin\BatalyonController::class, 'edit'])->name('batalyon-maps.edit');
     Route::put('/admin/batalyon-maps/update/{id}', [App\Http\Controllers\admin\BatalyonController::class, 'update'])->name('batalyon-maps.update');
 });
